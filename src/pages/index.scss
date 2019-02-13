@@ -1,0 +1,70 @@
+.text-scrambler {
+  font-weight: 100;
+  font-size: 3em;
+  color: #fafafa;
+}
+.dud {
+  color: #757575;
+}
+
+.fas {
+  bottom: 2em;
+  position: absolute;
+  font-size: 2.4em;
+  font-weight: 400;
+  animation: bounce 1.7s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.text-center {
+  color: #00000000;
+  font-size: xx-large;
+  h1 {
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+
+// .typewriter h1 {  
+//   color: #fff !important;
+//   margin-bottom: 3em;
+//   overflow: hidden; /* hide till animate */
+//   border-right: .15em solid orange; /* cursor */
+//   white-space: nowrap;
+//   margin: 0 auto; /* shift to left as typing happens */
+//   letter-spacing: .20em;
+//   animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+// }
+
+// /* The typing effect */
+
+// @keyframes typing {
+//   from {
+//     width: 0
+//   }
+//   to {
+//     width: 100%
+//   }
+// }
+
+// /* The typewriter cursor effect */
+
+// @keyframes blink-caret {
+//   from,
+//   to {
+//     border-color: transparent
+//   }
+//   50% {
+//     border-color: white;
+//   }
+// }

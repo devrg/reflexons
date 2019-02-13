@@ -1,9 +1,14 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
+import Helmet from "react-helmet";
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./header";
+import ParticlesBackground from './particles';
+import "./layout.scss";
+
+import("bootstrap/dist/css/bootstrap.min.css");
+import("bootstrap/dist/js/bootstrap");
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -18,29 +23,37 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
+        <Helmet>          
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
+            rel="stylesheet"
+          />
+        </Helmet>
+
+        <div className="main-content" id="outer-container">
+          <ParticlesBackground />
+          <Header />
+          <main id="page-wrap">{children}</main>
           <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            © {new Date().getFullYear()}
+            <br />
+            Designed by <a href="">Suparno Karmakar</a> &#38;{" "}
+            <a href="https://www.nparchments.com">Nabhoneel Majumdar</a>
           </footer>
         </div>
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
-export default Layout
+export default Layout;
