@@ -27,7 +27,14 @@ module.exports = {
         icon: `src/images/logo.png`,
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        includePaths: [
+          'src/assets',
+        ]
+      }
+    },
     // 'gatsby-plugin-offline',
   ],
 }

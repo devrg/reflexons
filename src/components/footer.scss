@@ -1,0 +1,57 @@
+$mediaMaxWidth: 1260px;
+$mediaTabletWidth: 960px;
+$mediaStdMobileWidth: 700px;
+$mediaMinWidth: 480px;
+
+footer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1.2em;
+  padding: 4em;
+  z-index: 10;
+  position: absolute;
+  background: linear-gradient(#000000ad, #0e0e0e);
+  width: 100%;
+  color: #cccccc;
+
+  display: flex !important;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;$mediaMaxWidth: 1260px;
+$mediaTabletWidth: 960px;
+$mediaStdMobileWidth: 700px;
+$mediaMinWidth: 480px;
+
+  .list-head {
+    color: #eeeeee;
+    font-size: 1.1em;
+    font-weight: 800;
+  }
+
+  ul {
+    margin: 0;
+    padding: 10px;
+    li {
+      list-style: none;
+      padding: 5px;
+    }
+  }
+}
+
+footer > div {
+  margin: 0 1em;
+}
+
+@media (max-width: $mediaTabletWidth) {
+  footer {
+    .info {
+      margin: 2em 0 0;
+    }
+  }
+}
+
+@media (max-width: $mediaStdMobileWidth) {
+  footer {
+    justify-content: initial;
+  }
+}

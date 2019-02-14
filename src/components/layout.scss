@@ -1,9 +1,15 @@
+$mediaMaxWidth: 1260px;
+$mediaTabletWidth: 960px;
+$mediaStdMobileWidth: 700px;
+$mediaMinWidth: 480px;
+
 * {
-  font-family: "Quicksand", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
 section.default-section {
@@ -16,7 +22,7 @@ section.default-section {
   color: white;
   font-size: 1.5em;
   text-align: center;
-	position: relative;
+  position: relative;
 
   &:after {
     content: "";
@@ -24,10 +30,10 @@ section.default-section {
     bottom: 0;
     left: 2em;
     width: calc(100% - 4em);
-  	height: calc(100% - 2em);
-  	// border-bottom: 10px dotted white;
+    height: calc(100% - 2em);
+    // border-bottom: 10px dotted white;
 
-  	padding: 1em;
+    padding: 1em;
     z-index: -1;
-	}
+  }
 }

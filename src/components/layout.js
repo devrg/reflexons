@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Helmet from "react-helmet";
 
 import Header from "./header";
+import Footer from "./footer";
 import ParticlesBackground from "./particles";
 import "./layout.scss";
 
@@ -40,12 +41,7 @@ const Layout = ({ children }) => (
           <ParticlesBackground />
           <Header />
           <main id="page-wrap">{children}</main>
-          <footer>
-            © {new Date().getFullYear()}
-            <br />
-            Designed by <a href="">Suparno Karmakar</a> &#38;{" "}
-            <a href="https://www.nparchments.com">Nabhoneel Majumdar</a>
-          </footer>
+          <Footer />
         </div>
       </>
     )}

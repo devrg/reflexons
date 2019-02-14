@@ -13,7 +13,7 @@ class LightweightModal extends Component {
     });
 
     window.addEventListener("click", event => {
-      if (event.target == modal) {
+      if (event.target === modal) {
         modal.style.display = "none";
       }
     });

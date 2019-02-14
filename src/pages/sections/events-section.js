@@ -115,14 +115,18 @@ class Events extends Component {
         break;
       case "games":
         this.gamesRef.current.style.display = "block";
-				break;
-			default:
+        break;
+      default:
     }
   }
 
   render() {
     return (
-      <section className="default-section" id="section-2">
+      <section
+        className="default-section"
+        id="section-2"
+        style={this.props.backgroundStyle || ''}
+      >
         {this.eventDetails.map((event, index) => (
           <LightModal
             key={event.slug + index}
@@ -162,19 +166,11 @@ class Events extends Component {
             <i className="fas fa-bug" />
             <div className="description">bug hunt</div>
           </div>
-					<div 
-						className="debate" 
-						data-id="debate" 
-						onClick={this.handleClick}
-					>
+          <div className="debate" data-id="debate" onClick={this.handleClick}>
             <i className="fas fa-diagnoses" />
             <div className="description">debate</div>
           </div>
-					<div 
-						className="quiz" 
-						data-id="quiz" 
-						onClick={this.handleClick}
-					>
+          <div className="quiz" data-id="quiz" onClick={this.handleClick}>
             <i className="fas fa-question-circle" />
             <div className="description">quiz</div>
           </div>
@@ -186,11 +182,7 @@ class Events extends Component {
             <i className="fas fa-camera-retro" />
             <div className="description">photography</div>
           </div>
-					<div 
-						className="games" 
-						data-id="games" 
-						onClick={this.handleClick}
-					>
+          <div className="games" data-id="games" onClick={this.handleClick}>
             <i className="fas fa-gamepad" />
             <div className="description">games</div>
           </div>

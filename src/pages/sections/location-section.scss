@@ -1,0 +1,45 @@
+$headingColor: #eeeeee;
+
+.locate-us {
+	background: $headingColor;
+	font-family: "Lobster", cursive;
+  background: $headingColor;
+  background-clip: text;
+  color: transparent;
+  animation: moveText 15s infinite ease;
+	font-size: 3em;
+	padding-bottom: 0.4em;
+
+  &:before {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: $headingColor;
+    width: 140px;
+  }
+
+  &:after {
+    display: inline-block;
+    margin: 0 0 20px 20px;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: $headingColor;
+    width: 140px;
+  }
+}
+
+.mapouter {
+  text-align: right;
+  height: 500px;
+  width: 600px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 600px;
+}

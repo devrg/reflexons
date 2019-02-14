@@ -6,9 +6,12 @@ import DotNavigate from "../components/dot-navigate";
 
 import "./index.scss";
 
+import CU from "../images/cu-top.jpg";
+
 import LandingSection from "./sections/landing-section";
 import EventsSection from "./sections/events-section";
 import ScheduleSection from "./sections/schedule-section";
+import LocationSection from "./sections/location-section";
 
 const IndexPage = () => {
   const indexLayout = React.createRef();
@@ -36,9 +39,14 @@ const IndexPage = () => {
         </div>
 
         <div ref={indexLayout}>
-          <LandingSection />
-          <EventsSection />
-          <ScheduleSection />
+          <LandingSection backgroundStyle={{ background: "linear-gradient(180deg, #00000000, #9c27b014)" }} />
+          <EventsSection backgroundStyle={{ background: "linear-gradient(180deg, #9c27b014, #ffcf770d)" }} />
+          {/* <ScheduleSection backgroundStyle={{ background: "linear-gradient(180deg, #ffcf770d, #00000000)" }} />
+          <LocationSection
+            backgroundStyle={{
+              background: `linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.68)),url(${CU}) background fixed`
+            }}
+          /> */}
         </div>
       </Layout>
     </>
