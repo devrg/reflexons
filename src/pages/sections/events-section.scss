@@ -1,0 +1,126 @@
+/* Second section: */
+
+.section-heading {
+  font-family: "Lobster", cursive;
+  background: #ffd900;
+  background-clip: text;
+  color: transparent;
+  animation: moveText 15s infinite ease;
+  font-size: 3em;
+
+  &:before {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #ffd900;
+    width: 140px;
+  }
+
+  &:after {
+    display: inline-block;
+    margin: 0 0 20px 20px;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #ffd900;
+    width: 140px;
+  }
+}
+
+.description {
+  padding: 0.7em 0;
+  color: white;
+  &:after {
+    content: "";
+    border-bottom: 10px solid yellow;
+  }
+}
+
+.broken-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  height: calc(50vh - 10px);
+
+  i {
+    font-size: 4em;
+    // opacity: 0.7;
+    animation: jelly 0.7s infinite;
+  }
+
+  div {
+    align-self: center;
+    transition: all 0.3s ease-in-out;
+    cursor: zoom-in;
+
+    .description {
+      // border-radius: 50%;
+    }
+  }
+
+  $elementCount: 7;
+  $highlightPalette: (
+    #ff5722,
+    #9c27b0,
+    #f85f73,
+    #448aff,
+    #4caf50,
+    #ffe0b2,
+    #009688,
+    #ffeb3b
+  );
+  $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
+
+  @for $i from 1 to $elementCount + 1 {
+    div:nth-child(#{$i}) {
+      color: nth($list: $palette, $n: $i);
+      .description {
+        color: nth($list: $palette, $n: $i);
+      }
+
+      &:hover {
+        color: nth($highlightPalette, $i);
+        .description {
+          border-bottom: 10px solid nth($highlightPalette, $i);
+          color: nth($highlightPalette, $i);
+        }
+      }
+    }
+  }
+
+  @for $i from 1 to round($elementCount/4) {
+    div:nth-child(-1n + 4) {
+      grid-row-start: $i;
+      grid-column: span 3;
+    }
+  }
+
+  @for $i from 0 to $elementCount%4 {
+    div:nth-last-child(#{$i + 1}) {
+      grid-row-start: round($elementCount/4) + 1;
+      grid-column: ($i * 4 + 1) / span 4;
+    }
+  }
+}
+
+$rotateDegree: 2deg;
+
+@keyframes jelly {
+  0%,
+  50%,
+  80%,
+  100% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-$rotateDegree);
+  }
+  80% {
+    transform: rotate($rotateDegree);
+  }
+}

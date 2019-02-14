@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Helmet from "react-helmet";
 
 import Header from "./header";
-import ParticlesBackground from './particles';
+import ParticlesBackground from "./particles";
 import "./layout.scss";
 
 import("bootstrap/dist/css/bootstrap.min.css");
@@ -23,7 +23,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Helmet>          
+        <Helmet>
           <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
             crossorigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
+            href="https://fonts.googleapis.com/css?family=Montserrat|Work+Sans|Quicksand|Lobster|Pacifico|Assistant|Roboto+Mono"
             rel="stylesheet"
           />
         </Helmet>

@@ -1,0 +1,105 @@
+* {
+  font-family: inherit;
+}
+
+/* The Modal (background) */
+.light-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  color: black;
+  background-color: #ffebae !important;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80% !important; /* Could be more or less, depending on screen size */
+  box-shadow: 9px 4px 100px -10px #868585;
+  animation-name: bringIn;
+  animation-duration: 0.4s;
+}
+
+@keyframes bringIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 40px !important;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  border: none !important;
+}
+
+.modal-header h2 {
+  text-align: center;
+  width: 100%;
+  border-bottom: 3px black solid;
+  padding: 0 0 1em;
+}
+
+$dividerWidth: 3px;
+
+.modal-body {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  justify-content: center;
+
+  div {
+    padding: 1em;
+    margin: 5px;
+    background: #effff0;
+    border-left: black $dividerWidth solid;
+    border-top: black $dividerWidth solid;
+    border-bottom: black $dividerWidth solid;
+    border-right: black $dividerWidth solid;
+    transform: skew(-10deg);
+
+    div {
+      transform: skew(10deg) !important;
+      border: none !important;
+    }
+  }
+}
+
+.btn {
+  width: min-content;
+	margin: 0 auto;
+	border-width: $dividerWidth !important;
+	border-color: black !important;
+	color: black !important;
+	font-weight: 800 !important;
+
+	&:hover {
+		color: white !important;
+	}
+}
