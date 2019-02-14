@@ -2,7 +2,7 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 100; 
+  z-index: 100;
 
   i {
     margin: 0.3em;
@@ -13,10 +13,79 @@
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    
+
     &:hover {
       color: black;
       background: #ffffffe1;
     }
+  }
+}
+
+$mediaMaxWidth: 1260px;
+$mediaTabletWidth: 960px;
+$mediaStdMobileWidth: 720px;
+$mediaMinWidth: 500px;
+
+@mixin headingAccompaniment($x, $y, $length) {
+  &:before {
+    margin: 0 $x $y 0;
+    width: $length;
+  }
+  &:after {
+    margin: 0 0 $y $x;
+    width: $length;
+  }
+}
+
+.section-heading {
+  font-family: "Lobster", cursive;
+  background: #ffd900;
+  background-clip: text;
+  color: transparent;
+  animation: moveText 15s infinite ease;
+  font-size: 5rem;
+
+  @include headingAccompaniment(20px, 20px, 5rem);
+
+  &:before {
+    display: inline-block;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #ffd900;
+  }
+
+  &:after {
+    display: inline-block;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #ffd900;
+  }
+}
+
+@media (max-width: $mediaStdMobileWidth) {
+  .section-heading {
+    font-size: 3.5rem;
+    @include headingAccompaniment(20px, 14px, 5rem);
+  }
+}
+
+@media (max-width: $mediaMaxWidth) {
+  .section-heading {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: $mediaStdMobileWidth) {
+
+  .section-heading {
+    @include headingAccompaniment(10px, 10px, 3rem);
+  }
+}
+
+@media (max-width: $mediaMinWidth) {
+  .section-heading {
+    @include headingAccompaniment(10px, 10px, 3rem);
   }
 }

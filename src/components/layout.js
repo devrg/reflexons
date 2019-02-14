@@ -32,7 +32,7 @@ const Layout = ({ children }) => (
             crossorigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Montserrat|Work+Sans|Quicksand|Lobster|Pacifico|Assistant|Roboto+Mono"
+            href="https://fonts.googleapis.com/css?family=Lobster|Roboto+Mono"
             rel="stylesheet"
           />
         </Helmet>

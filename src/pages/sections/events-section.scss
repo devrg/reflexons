@@ -1,7 +1,7 @@
 $mediaMaxWidth: 1260px;
 $mediaTabletWidth: 960px;
-$mediaStdMobileWidth: 700px;
-$mediaMinWidth: 480px;
+$mediaStdMobileWidth: 720px;
+$mediaMinWidth: 500px;
 
 $elementCount: 7;
 $highlightPalette: (
@@ -16,58 +16,13 @@ $highlightPalette: (
 );
 $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
 
+
+
 /* Second section: */
 
-.section-heading {
-  font-family: "Lobster", cursive;
-  background: #ffd900;
-  background-clip: text;
-  color: transparent;
-  animation: moveText 15s infinite ease;
-  font-size: 5rem;
-
-  &:before {
-    display: inline-block;
-    margin: 0 20px 20px 0;
-    height: 3px;
-    content: " ";
-    text-shadow: none;
-    background-color: #ffd900;
-    width: 5rem;
-  }
-
-  &:after {
-    display: inline-block;
-    margin: 0 0 20px 20px;
-    height: 3px;
-    content: " ";
-    text-shadow: none;
-    background-color: #ffd900;
-    width: 5rem;
-  }
-}
-
-@media (max-width: $mediaMaxWidth) {
-  .section-heading {
-    font-size: 4rem;
-  }
-}
-
-@media (max-width: $mediaStdMobileWidth) {
-  .section-heading {
-    font-size: 3.5rem;
-
-    &:before {
-      margin: 0 20px 14px 0;
-    }
-
-    &:after {
-      margin: 0 0 14px 20px;
-    }
-  }
-}
-
 .description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   padding: 0.7em 0;
   color: white;
   &:after {
@@ -78,12 +33,10 @@ $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
 
 .broken-grid {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  grid-auto-rows: 40px;
-  grid-gap: 10px;
-  height: calc(50vh - 10px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 8rem 5rem;
 
   i {
     font-size: 7rem;
@@ -94,6 +47,7 @@ $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
     align-self: center;
     transition: all 0.3s ease-in-out;
     cursor: zoom-in;
+    margin: 1rem 2rem;
   }
 
   @for $i from 1 to $elementCount + 1 {
@@ -105,64 +59,46 @@ $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
 
       &:hover {
         color: nth($highlightPalette, $i);
-        margin-top: 1em;
         border: 5px solid nth($highlightPalette, $i);
         border-radius: 20px;
-        width: min-content;
         padding: 0.5em 1em;
-        margin: 1em auto;
         .description {
           border: none;
           width: auto;
-          padding: 0;
-          margin: auto;
           color: nth($highlightPalette, $i);
         }
       }
     }
   }
+}
 
-  @for $i from 1 to round($elementCount/4) {
-    div:nth-child(-1n + 4) {
-      grid-row-start: $i;
-      grid-column: span 3;
-    }
-  }
-
-  @for $i from 0 to $elementCount%4 {
-    div:nth-last-child(#{$i + 1}) {
-      grid-row-start: round($elementCount/4) + 1;
-      grid-column: ($i * 4 + 1) / span 4;
-    }
+@media (max-width: $mediaMaxWidth) {
+  .broken-grid div {
+    margin: 1rem !important;
   }
 }
 
 @media (max-width: $mediaTabletWidth) {
   .broken-grid {
-    i {
-      font-size: 5rem !important;
-    }
+    padding: 5rem 3rem;
+  }
+  .broken-grid i {
+    font-size: 5rem !important;
   }
 }
 
-// @media (max-width: 800px) {
-//   .broken-grid {
-//     $count: floor($elementCount/3);
-//     @for $i from 1 to $count {
-//       div:nth-child(-#{($i - 1) * 3 + 1}n + #{$i * 3}) {
-//         grid-row-start: $i;
-//         grid-column: span 4;
-//       }
-//     }
+@media (max-width: $mediaStdMobileWidth) {
+  .broken-grid div {
+    margin: 1rem 0.5rem;
+  }
+}
 
-//     // @for $i from 0 to $elementCount%4 {
-//     //   div:nth-last-child(#{$i + 1}) {
-//     //     grid-row-start: round($elementCount/3) + 1;
-//     //     grid-column: ($i * 3 + 1) / span 4;
-//     //   }
-//     // }
-//   }
-// }
+@media (max-width: $mediaMinWidth) {
+
+  .broken-grid div {
+    margin: 1rem 0.3rem;
+  }
+}
 
 $rotateDegree: 2deg;
 

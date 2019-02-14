@@ -39,14 +39,14 @@ const IndexPage = () => {
         </div>
 
         <div ref={indexLayout}>
-          <LandingSection backgroundStyle={{ background: "linear-gradient(180deg, #00000000, #9c27b014)" }} />
-          <EventsSection backgroundStyle={{ background: "linear-gradient(180deg, #9c27b014, #ffcf770d)" }} />
-          {/* <ScheduleSection backgroundStyle={{ background: "linear-gradient(180deg, #ffcf770d, #00000000)" }} />
+          <LandingSection backgroundStyle={{ background: "linear-gradient(180deg, #00000000, #9c27b016)" }} />
+          <EventsSection backgroundStyle={{ background: "linear-gradient(180deg, #9c27b016, #c1a16616)" }} />
+          <ScheduleSection backgroundStyle={{ background: "linear-gradient(180deg, #c1a16616, #00000000)" }} />
           <LocationSection
             backgroundStyle={{
               background: `linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.68)),url(${CU}) background fixed`
             }}
-          /> */}
+          />
         </div>
       </Layout>
     </>

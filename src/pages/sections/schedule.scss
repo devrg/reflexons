@@ -1,31 +1,10 @@
 $headingColor: #008cff;
 
 #section-3 .section-heading {
-  font-family: "Lobster", cursive;
-  background: $headingColor;
-  background-clip: text;
-  color: transparent;
-  animation: moveText 15s infinite ease;
-  font-size: 3em;
-
-  &:before {
-    display: inline-block;
-    margin: 0 20px 20px 0;
-    height: 3px;
-    content: " ";
-    text-shadow: none;
-    background-color: $headingColor;
-    width: 140px;
-  }
-
+  color: $headingColor;
+  &:before,
   &:after {
-    display: inline-block;
-    margin: 0 0 20px 20px;
-    height: 3px;
-    content: " ";
-    text-shadow: none;
     background-color: $headingColor;
-    width: 140px;
   }
 }
 
@@ -42,12 +21,12 @@ $timelineSpineColor: #3ae1ff;
   margin: 50px auto;
   position: relative;
   line-height: 1.4em;
-  font-size: 1.03em;
+  font-size: 1.4rem;
   padding: 50px;
   list-style: none;
   text-align: left;
   font-weight: 100;
-  max-width: 50%;
+  max-width: 80%;
 
   h1,
   h2,
@@ -79,8 +58,9 @@ $timelineSpineColor: #3ae1ff;
     }
 
     &:before {
-      left: -217.5px;
-      color: #dbdbdbde;
+      right: -140px;
+      transform: rotate(90deg);
+      color: #ffffff;
       content: attr(data-date);
       text-align: right;
       font-weight: 100;
