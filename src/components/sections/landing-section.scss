@@ -21,6 +21,22 @@ $mediaMinWidth: 480px;
 
   img {
     filter: brightness(300%);
+    animation: glow 2s infinite 2.7s;
+  }
+}
+
+@keyframes glow {
+  25% {
+    filter: brightness(300%);
+  }
+  50% {
+    filter: brightness(350%);
+  }
+  75% {
+    filter: brightness(350%);
+  }
+  100% {
+    filter: brightness(300%);
   }
 }
 
@@ -65,7 +81,7 @@ $mediaMinWidth: 480px;
 }
 
 .fa-caret-down {
-  bottom: 2em;
+  bottom: 2.5em;
   position: absolute;
   font-size: 2.5em;
   font-weight: 400;
@@ -80,13 +96,13 @@ $mediaMinWidth: 480px;
   50%,
   80%,
   100% {
-    bottom: 2rem;
+    bottom: 2.5rem;
   }
   40% {
-    bottom: 4rem;
+    bottom: 4.5rem;
   }
   60% {
-    bottom: 3rem;
+    bottom: 3.5rem;
   }
 }
 

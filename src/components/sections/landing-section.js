@@ -60,7 +60,6 @@ class Landing extends Component {
             }
           `}
           render={data => {
-            console.log(data);
             return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
           }}
         />

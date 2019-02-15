@@ -3,6 +3,7 @@ module.exports = {
     title: `Reflexons 2019`,
     description: `A reunion + annual fest of the department of Computer Science and Engineering at the University of Calcutta`,
     author: `@nabhoneel`,
+    siteUrl: 'https://www.reflexons.cucse.org'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,9 +22,9 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#46ceff`,
+        theme_color: `#46ceff`,
+        display: `standalone`,
         icon: `src/images/logo.png`,
       },
     },

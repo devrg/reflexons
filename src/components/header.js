@@ -1,43 +1,163 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from "gatsby";
+import { Link as AnchorLink } from "react-scroll";
+import React, { Component } from "react";
 
-import { push as Menu } from 'react-burger-menu'
-import MenuBars from '../images/menu-bars.png'
+import { push as Menu } from "react-burger-menu";
 
-import './header.scss'
+import "./header.scss";
 
-const Header = () => (
-  <Menu
-    // customBurgerIcon={ <img src={MenuBars} /> }
-    pageWrapId={ "page-wrap" } 
-    outerContainerId={ "outer-container" }
-    right
-    onStateChange={ (state) => {
-      if(state.isOpen) {
-        document.querySelector('.bm-burger-button').style.display = 'none';
+class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loaded: false
+    }
+
+    this.location = '/';
+    this.showSub = false;
+
+    this.aboutListRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.location = window.location.pathname;
+    this.setState({
+      loaded: true
+    });
+  }
+
+  renderLinks() {
+    if (this.location) {
+      if (this.location === "/") {
+        return (
+          <Menu
+            pageWrapId={"page-wrap"}
+            outerContainerId={"outer-container"}
+            right
+            onStateChange={state => {
+              if (state.isOpen) {
+                document.querySelector(".bm-burger-button").style.display =
+                  "none";
+              } else {
+                document.querySelector(".bm-burger-button").style.display =
+                  "block";
+              }
+            }}
+          >
+            <Link to="/" className="menu-item">
+              Home
+            </Link>
+            <AnchorLink to="section-2" className="menu-item">
+              Events
+            </AnchorLink>
+            <AnchorLink to="section-3" className="menu-item">
+              Schedule
+            </AnchorLink>
+            <div
+              className="menu-item sub-menu-trigger"
+              onClick={() => {
+                this.showSub = !this.showSub;
+                console.log("click");
+                console.log(this.aboutListRef.current);
+                if (this.showSub)
+                  this.aboutListRef.current.style.height = "110px";
+                else this.aboutListRef.current.style.height = "0";
+              }}
+            >
+              About
+            </div>
+            <div
+              className="sub-menu-list"
+              ref={this.aboutListRef}
+              style={{ height: "0" }}
+            >
+              <Link to="/gallery" className="sub-menu bm-item">
+                Gallery
+              </Link>
+              <Link to="/team" className="sub-menu bm-item">
+                Team
+              </Link>
+            </div>
+            <Link to="/sponsors" className="menu-item">
+              Sponsors
+            </Link>
+            <Link to="/contact" className="menu-item">
+              Contact
+            </Link>
+            <AnchorLink to="section-4" className="menu-item">
+              Location
+            </AnchorLink>
+          </Menu>
+        );
       } else {
-        document.querySelector('.bm-burger-button').style.display = 'block';
+        return (
+          <Menu
+            pageWrapId={"page-wrap"}
+            outerContainerId={"outer-container"}
+            right
+            onStateChange={state => {
+              if (state.isOpen) {
+                document.querySelector(".bm-burger-button").style.display =
+                  "none";
+              } else {
+                document.querySelector(".bm-burger-button").style.display =
+                  "block";
+              }
+            }}
+          >
+            <Link to="/" className="menu-item">
+              Home
+            </Link>
+            <Link to="/#section-2" className="menu-item">
+              Events
+            </Link>
+            <Link to="/#section-3" className="menu-item">
+              Schedule
+            </Link>
+            <div
+              className="menu-item sub-menu-trigger"
+              onClick={() => {
+                this.showSub = !this.showSub;
+                console.log("click");
+                console.log(this.aboutListRef.current);
+                if (this.showSub)
+                  this.aboutListRef.current.style.height = "110px";
+                else this.aboutListRef.current.style.height = "0";
+              }}
+            >
+              About
+            </div>
+            <div
+              className="sub-menu-list"
+              ref={this.aboutListRef}
+              style={{ height: "0" }}
+            >
+              <Link to="/gallery" className="sub-menu bm-item">
+                Gallery
+              </Link>
+              <Link to="/team" className="sub-menu bm-item">
+                Team
+              </Link>
+            </div>
+            <Link to="/sponsors" className="menu-item">
+              Sponsors
+            </Link>
+            <Link to="/contact" className="menu-item">
+              Contact
+            </Link>
+            <Link to="/#section-4" className="menu-item">
+              Location
+            </Link>
+          </Menu>
+        );
       }
-    }}
-    >
-    <Link to='/' className="menu-item">Home</Link>
-    <Link to='/about' className="menu-item">About</Link>
-    <Link to='/events' className="menu-item">Events</Link>
-    <Link to='/gallery' className="menu-item">Gallery</Link>
-    <Link to='/team' className="menu-item">Team</Link>
-    <Link to='/sponsors' className="menu-item">Sponsors</Link>
-    <Link to='/schedule' className="menu-item">Schedule</Link>
-    <Link to='/contact' className="menu-item">Contact</Link>
-  </Menu>
-)
+    }
+  }
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  render() {
+    return <>{this.state.loaded ? this.renderLinks() : null}</>;
+  }
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;

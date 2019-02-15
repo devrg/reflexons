@@ -18,6 +18,18 @@ iframe {
   width: 400px;
 }
 
+@media (max-device-width: 450px) {
+  iframe {
+    width: 380px;
+  }
+}
+
+@media (max-device-width: 350px) {
+  iframe {
+    width: 300px;
+  }
+}
+
 .mapouter {
   text-align: center;
   height: 500px;

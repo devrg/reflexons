@@ -4,7 +4,6 @@ import { Link } from "react-scroll";
 import './dot-navigate.scss';
 
 const DotNavigate = ({ elements }) => {
-  console.log(elements);
   const list = elements.map((link, index) => (
     <li key={link + index}>
       <Link

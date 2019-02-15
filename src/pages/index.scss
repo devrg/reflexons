@@ -1,3 +1,8 @@
+$mediaMaxWidth: 1260px;
+$mediaTabletWidth: 960px;
+$mediaStdMobileWidth: 720px;
+$mediaMinWidth: 500px;
+
 .social-media {
   position: absolute;
   top: 20px;
@@ -21,10 +26,13 @@
   }
 }
 
-$mediaMaxWidth: 1260px;
-$mediaTabletWidth: 960px;
-$mediaStdMobileWidth: 720px;
-$mediaMinWidth: 500px;
+@media (max-width: $mediaStdMobileWidth) {
+  .social-media {
+    i {
+      font-size: 1.6em;
+    }
+  }
+}
 
 @mixin headingAccompaniment($x, $y, $length) {
   &:before {
