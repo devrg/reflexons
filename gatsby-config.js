@@ -20,10 +20,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
-        short_name: `starter`,
+        short_name: `Reflexons 2019`,
         start_url: `/`,
-        background_color: `#46ceff`,
-        theme_color: `#46ceff`,
+        background_color: `#000`,
+        theme_color: `#000`,
         display: `standalone`,
         icon: `src/images/logo.png`,
       },
