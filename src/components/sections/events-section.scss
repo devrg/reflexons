@@ -5,18 +5,38 @@ $mediaMinWidth: 500px;
 
 $elementCount: 7;
 $highlightPalette: (
-  #ff5722,
-  #9c27b0,
-  #f85f73,
-  #448aff,
+  // #ff5722,
+    // #ba68c8,
+    // #f85f73,
+    // #448aff,
+    // #4caf50,
+    // #ffe0b2,
+    // #009688,
+    // #ffeb3b
+    #cddc39,
   #4caf50,
-  #ffe0b2,
   #009688,
-  #ffeb3b
+  #03a9f4,
+  #3f51b5,
+  #673ab7,
+  #9c27b0,
+  #e91e63,
+  #f44336
 );
-$palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
 
+$palette: (
+  #ffffff,
+  #fff9e2,
+  #ffdda7,
+  #ffd591,
+  #fdc872,
+  #fabc57,
+  #ffb53d,
+  #ffaa22
+);
 
+$strokeColour: #2eabff;
+$strokeWidth: 1px;
 
 /* Second section: */
 
@@ -41,6 +61,14 @@ $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
   i {
     font-size: 7rem;
     animation: jelly 0.7s infinite;
+
+    &:before {
+      text-shadow: $strokeWidth $strokeWidth 0 $strokeColour,
+        -$strokeWidth #{-$strokeWidth} 0 $strokeColour,
+        $strokeWidth -$strokeWidth 0 $strokeColour,
+        -$strokeWidth $strokeWidth 0 $strokeColour,
+        $strokeWidth $strokeWidth 0 $strokeColour;
+    }
   }
 
   div {
@@ -52,16 +80,29 @@ $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
 
   @for $i from 1 to $elementCount + 1 {
     div:nth-child(#{$i}) {
-      color: nth($list: $palette, $n: $i);
+      color: white; // nth($list: $palette, $n: $i);
       .description {
-        color: nth($list: $palette, $n: $i);
+        color: white; // nth($list: $palette, $n: $i);
+      }
+
+      &:before:hover {
+        $strokeColour: white;
+
+        &:before {
+          text-shadow: $strokeWidth $strokeWidth 0 $strokeColour,
+            -$strokeWidth #{-$strokeWidth} 0 $strokeColour,
+            $strokeWidth -$strokeWidth 0 $strokeColour,
+            -$strokeWidth $strokeWidth 0 $strokeColour,
+            $strokeWidth $strokeWidth 0 $strokeColour !important;
+        }
       }
 
       &:hover {
         color: nth($highlightPalette, $i);
-        border: 5px solid nth($highlightPalette, $i);
-        border-radius: 20px;
-        padding: 0.5em 1em;
+        // border: 5px solid nth($highlightPalette, $i);
+        // border-radius: 20px;
+        // padding: 0.5em 1em;
+
         .description {
           border: none;
           width: auto;
@@ -94,6 +135,14 @@ $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
 }
 
 @media (max-width: $mediaMinWidth) {
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .broken-grid {
+    padding: 5rem 0;
+  }
+
   .broken-grid i {
     font-size: 3rem !important;
   }

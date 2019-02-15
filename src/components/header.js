@@ -3,11 +3,13 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import { push as Menu } from 'react-burger-menu'
+import MenuBars from '../images/menu-bars.png'
 
 import './header.scss'
 
 const Header = () => (
-  <Menu 
+  <Menu
+    customBurgerIcon={ <img src={customBurgerIcon} /> }
     pageWrapId={ "page-wrap" } 
     outerContainerId={ "outer-container" }
     right

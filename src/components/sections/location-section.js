@@ -15,8 +15,6 @@ class Location extends Component {
           <div className="gmap_canvas">
             <iframe
               title="location"
-              width="450"
-              height="500"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=university%20of%20calcutta%2C%20technology%20campus&t=&z=15&ie=UTF8&iwloc=&output=embed"
               frameBorder="0"

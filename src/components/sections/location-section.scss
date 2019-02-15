@@ -13,10 +13,15 @@ $headingColor: #eeeeee;
   }
 }
 
+iframe {
+  height: 700px;
+  width: 400px;
+}
+
 .mapouter {
   text-align: center;
   height: 500px;
-  width: fit-content;
+  width: auto;
 }
 
 .gmap_canvas {
