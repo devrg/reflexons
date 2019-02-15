@@ -16,12 +16,12 @@ $headingColor: #eeeeee;
 .mapouter {
   text-align: center;
   height: 500px;
-  width: 600px;
+  width: fit-content;
 }
 
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
   height: 500px;
-  width: 600px;
+  width: 100%;
 }

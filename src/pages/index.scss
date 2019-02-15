@@ -64,13 +64,6 @@ $mediaMinWidth: 500px;
   }
 }
 
-@media (max-width: $mediaStdMobileWidth) {
-  .section-heading {
-    font-size: 3.5rem;
-    @include headingAccompaniment(20px, 14px, 5rem);
-  }
-}
-
 @media (max-width: $mediaMaxWidth) {
   .section-heading {
     font-size: 4rem;
@@ -78,9 +71,24 @@ $mediaMinWidth: 500px;
 }
 
 @media (max-width: $mediaStdMobileWidth) {
+  .section-heading {
+    font-size: 3.5rem;
+    // @include headingAccompaniment(20px, 14px, 5rem);
+  }
+}
+
+@media (max-width: $mediaStdMobileWidth) {
 
   .section-heading {
     @include headingAccompaniment(10px, 10px, 3rem);
+  }
+}
+
+@media (max-width: 550px) {
+  .section-heading {
+    &:before, &:after {
+      display: none;
+    }
   }
 }
 

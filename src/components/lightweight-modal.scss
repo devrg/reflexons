@@ -1,3 +1,8 @@
+$mediaMaxWidth: 1260px;
+$mediaTabletWidth: 960px;
+$mediaStdMobileWidth: 720px;
+$mediaMinWidth: 500px;
+
 * {
   font-family: inherit;
 }
@@ -91,15 +96,37 @@ $dividerWidth: 3px;
   }
 }
 
+@media (max-width: $mediaStdMobileWidth) {
+  .modal-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .modal-body {
+    font-size: 1.3rem;
+    div {
+      transform: skew(0);
+      div {
+        transform: skew(0) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .modal-body {
+    flex-wrap: wrap;
+  }
+}
+
 .btn {
   width: min-content;
-	margin: 0 auto;
-	border-width: $dividerWidth !important;
-	border-color: black !important;
-	color: black !important;
-	font-weight: 800 !important;
+  margin: 0 auto;
+  border-width: $dividerWidth !important;
+  border-color: black !important;
+  color: black !important;
+  font-weight: 800 !important;
 
-	&:hover {
-		color: white !important;
-	}
+  &:hover {
+    color: white !important;
+  }
 }

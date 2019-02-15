@@ -47,7 +47,7 @@ $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
     align-self: center;
     transition: all 0.3s ease-in-out;
     cursor: zoom-in;
-    margin: 1rem 2rem;
+    margin: 1rem 3rem;
   }
 
   @for $i from 1 to $elementCount + 1 {
@@ -94,9 +94,12 @@ $palette: (#fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
 }
 
 @media (max-width: $mediaMinWidth) {
+  .broken-grid i {
+    font-size: 3rem !important;
+  }
 
   .broken-grid div {
-    margin: 1rem 0.3rem;
+    margin: 1rem 0.3rem !important;
   }
 }
 
