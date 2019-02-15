@@ -41,10 +41,28 @@ $strokeWidth: 1px;
 /* Second section: */
 
 .description {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  //   Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Luckiest Guy", cursive;
   padding: 0.7em 0;
-  color: white;
+  background: #ffffffcf;
+  border-radius: 5px;
+  color: black !important;
+  padding: 0.7em 1em;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+
+  border: 5px solid #888888c9;
+
+  transition: all 0.3s ease-in-out;
+
+  i {
+    padding-left: 0.8em;
+  }
+
   &:after {
     content: "";
     border-bottom: 10px solid yellow;
@@ -58,29 +76,15 @@ $strokeWidth: 1px;
   justify-content: space-evenly;
   padding: 8rem 5rem;
 
-  i {
-    font-size: 7rem;
-    animation: jelly 0.7s infinite;
-
-    &:before {
-      text-shadow: $strokeWidth $strokeWidth 0 $strokeColour,
-        -$strokeWidth #{-$strokeWidth} 0 $strokeColour,
-        $strokeWidth -$strokeWidth 0 $strokeColour,
-        -$strokeWidth $strokeWidth 0 $strokeColour,
-        $strokeWidth $strokeWidth 0 $strokeColour;
-    }
-  }
-
   div {
     align-self: center;
     transition: all 0.3s ease-in-out;
     cursor: zoom-in;
-    margin: 1rem 3rem;
+    margin: 0.7rem 0.5rem;
   }
 
   @for $i from 1 to $elementCount + 1 {
     div:nth-child(#{$i}) {
-      color: white; // nth($list: $palette, $n: $i);
       .description {
         color: white; // nth($list: $palette, $n: $i);
       }
@@ -104,7 +108,7 @@ $strokeWidth: 1px;
         // padding: 0.5em 1em;
 
         .description {
-          border: none;
+          border-width: 2px;
           width: auto;
           color: nth($highlightPalette, $i);
         }
@@ -115,7 +119,7 @@ $strokeWidth: 1px;
 
 @media (max-width: $mediaMaxWidth) {
   .broken-grid div {
-    margin: 1rem !important;
+    // margin: 1rem !important;
   }
 }
 
@@ -123,32 +127,25 @@ $strokeWidth: 1px;
   .broken-grid {
     padding: 5rem 3rem;
   }
-  .broken-grid i {
-    font-size: 5rem !important;
-  }
 }
 
 @media (max-width: $mediaStdMobileWidth) {
   .broken-grid div {
-    margin: 1rem 0.5rem;
+    // margin: 1rem 0.5rem;
   }
 }
 
 @media (max-width: $mediaMinWidth) {
   .description {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
   .broken-grid {
     padding: 5rem 0;
   }
 
-  .broken-grid i {
-    font-size: 3rem !important;
-  }
-
   .broken-grid div {
-    margin: 1rem 0.3rem !important;
+    // margin: 1rem 0.3rem !important;
   }
 }
 

@@ -3,6 +3,14 @@ $mediaTabletWidth: 960px;
 $mediaStdMobileWidth: 720px;
 $mediaMinWidth: 500px;
 
+$gray-lighter: #f7f7f7;
+$gray-light: #dbdbdd;
+$gray-dark: #aeafb3;
+$gray-darker: #454547;
+$pink: #e89d93;
+$yellow: #eec71a;
+$paper: #f3d963;
+
 * {
   font-family: inherit;
 }
@@ -22,8 +30,36 @@ $mediaMinWidth: 500px;
 
 /* Modal Content/Box */
 .modal-content {
-  color: black;
-  background-color: #ffebae !important;
+  color: #000000;
+  background-image: linear-gradient(#f9edb6, #f4dc6e 7px, #f3d963 7px, #ffffff);
+  background-size: 100% 14px;
+  // background-color: #ffebae !important;
+  // background: radial-gradient(#c4c4c4 3px, transparent 4px),
+  //   radial-gradient(#c4c4c4 3px, transparent 4px),
+  //   linear-gradient(#fff 4px, transparent 0),
+  //   linear-gradient(
+  //     45deg,
+  //     transparent 74px,
+  //     transparent 75px,
+  //     #a4a4a4 75px,
+  //     #a4a4a4 76px,
+  //     transparent 77px,
+  //     transparent 109px
+  //   ),
+  //   linear-gradient(
+  //     -45deg,
+  //     transparent 75px,
+  //     transparent 76px,
+  //     #a4a4a4 76px,
+  //     #a4a4a4 77px,
+  //     transparent 78px,
+  //     transparent 109px
+  //   ),
+  //   #fff;
+  // background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  // background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  // background: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  // linear-gradient(#eee .1em, transparent .1em);
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -32,31 +68,31 @@ $mediaMinWidth: 500px;
   animation-name: bringIn;
   animation-duration: 0.4s;
 
-  &:after {
-    content: "";
-    position: absolute !important;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    border-right: #fff 7px solid;
-    border-bottom: #fff 7px solid;
-    -moz-border-radius: 0 0 20px 0;
-    -webkit-border-radius: 0 0 20px 0;
-    border-radius: 0 0 20px 0;
-  }
+  // &:after {
+  //   content: "";
+  //   position: absolute !important;
+  //   z-index: 100;
+  //   top: 0;
+  //   left: 0;
+  //   border-right: #fff 7px solid;
+  //   border-bottom: #fff 7px solid;
+  //   -moz-border-radius: 0 0 20px 0;
+  //   -webkit-border-radius: 0 0 20px 0;
+  //   border-radius: 0 0 20px 0;
+  // }
 
-  &:before {
-    content: "";
-    position: absolute !important;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    border-left: #fff 7px solid;
-    border-bottom: #fff 7px solid;
-    -moz-border-radius: 0 0 0 20px;
-    -webkit-border-radius: 0 0 0 20px;
-    border-radius: 0 0 0 20px;
-  }
+  // &:before {
+  //   content: "";
+  //   position: absolute !important;
+  //   z-index: 100;
+  //   top: 0;
+  //   right: 0;
+  //   border-left: #fff 7px solid;
+  //   border-bottom: #fff 7px solid;
+  //   -moz-border-radius: 0 0 0 20px;
+  //   -webkit-border-radius: 0 0 0 20px;
+  //   border-radius: 0 0 0 20px;
+  // }
 }
 
 @keyframes bringIn {
@@ -112,10 +148,13 @@ $dividerWidth: 3px;
     border-top: black $dividerWidth solid;
     border-bottom: black $dividerWidth solid;
     border-right: black $dividerWidth solid;
-    transform: skew(-10deg);
+    // transform: skew(-10deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     div {
-      transform: skew(10deg) !important;
+      // transform: skew(10deg) !important;
       border: none !important;
     }
   }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./events-section.scss";
 
-import LightModal from '../lightweight-modal';
+import LightModal from "../lightweight-modal";
 
 class Events extends Component {
   constructor(props) {
@@ -125,7 +125,7 @@ class Events extends Component {
       <section
         className="default-section"
         id="section-2"
-        style={this.props.backgroundStyle || ''}
+        style={this.props.backgroundStyle || ""}
       >
         {this.eventDetails.map((event, index) => (
           <LightModal
@@ -147,44 +147,51 @@ class Events extends Component {
             data-id="code-combat"
             onClick={this.handleClick}
           >
-            <i className="fas fa-code" />
-            <div className="description">code combat</div>
+            <div className="description">
+              <i className="fas fa-code" /> code combat
+            </div>
           </div>
           <div
             className="code-beta"
             data-id="code-beta"
             onClick={this.handleClick}
           >
-            <i className="fas fa-terminal" />
-            <div className="description">code beta</div>
+            <div className="description">
+              <i className="fas fa-terminal" /> code beta
+            </div>
           </div>
           <div
             className="bug-hunt"
             data-id="bug-hunt"
             onClick={this.handleClick}
           >
-            <i className="fas fa-bug" />
-            <div className="description">bug hunt</div>
+            <div className="description">
+              <i className="fas fa-bug" /> bug hunt
+            </div>
           </div>
           <div className="debate" data-id="debate" onClick={this.handleClick}>
-            <i className="fas fa-diagnoses" />
-            <div className="description">debate</div>
+            <div className="description">
+              <i className="fas fa-diagnoses" /> debate
+            </div>
           </div>
           <div className="quiz" data-id="quiz" onClick={this.handleClick}>
-            <i className="fas fa-question-circle" />
-            <div className="description">quiz</div>
+            <div className="description">
+              <i className="fas fa-question-circle" /> quiz
+            </div>
           </div>
           <div
             className="photography"
             data-id="photography"
             onClick={this.handleClick}
           >
-            <i className="fas fa-camera-retro" />
-            <div className="description">photography</div>
+            <div className="description">
+              <i className="fas fa-camera-retro" /> photography
+            </div>
           </div>
           <div className="games" data-id="games" onClick={this.handleClick}>
-            <i className="fas fa-gamepad" />
-            <div className="description">games</div>
+            <div className="description">
+              <i className="fas fa-gamepad" /> games
+            </div>
           </div>
         </div>
       </section>

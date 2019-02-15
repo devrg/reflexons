@@ -10,7 +10,21 @@
  
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #7e7e80;
+  background: #d6d6d6;
+  transition: all 0.2s ease-in-out;
+  height: 14% !important;
+}
+
+.bm-burger-bars:nth-child(1) {
+  top: 0% !important;
+}
+
+.bm-burger-bars:nth-child(2) {
+  top: 0% + 30% !important;
+}
+
+.bm-burger-bars:nth-child(3) {
+  top: 0% + 60% !important;
 }
  
 /* Color/shape of burger icon bars on hover*/

@@ -9,7 +9,7 @@ import './header.scss'
 
 const Header = () => (
   <Menu
-    customBurgerIcon={ <img src={customBurgerIcon} /> }
+    // customBurgerIcon={ <img src={MenuBars} /> }
     pageWrapId={ "page-wrap" } 
     outerContainerId={ "outer-container" }
     right
