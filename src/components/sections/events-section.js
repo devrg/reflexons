@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./events-section.scss";
 
-import LightModal from "../../components/lightweight-modal";
+import LightModal from '../lightweight-modal';
 
 class Events extends Component {
   constructor(props) {

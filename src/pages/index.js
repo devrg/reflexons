@@ -8,10 +8,10 @@ import "./index.scss";
 
 import CU from "../images/cu-top.jpg";
 
-import LandingSection from "./sections/landing-section";
-import EventsSection from "./sections/events-section";
-import ScheduleSection from "./sections/schedule-section";
-import LocationSection from "./sections/location-section";
+import LandingSection from "../components/sections/landing-section";
+import EventsSection from "../components/sections/events-section";
+import ScheduleSection from "../components/sections/schedule-section";
+import LocationSection from "../components/sections/location-section";
 
 const IndexPage = () => {
   const indexLayout = React.createRef();

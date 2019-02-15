@@ -3,7 +3,7 @@ import { Link as AnchorLink } from "react-scroll";
 import { graphql, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-import TextScramble from "../../assets/text-scrambler";
+import TextScramble from "../text-scrambler";
 
 import "./landing-section.scss";
 
