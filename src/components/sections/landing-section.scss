@@ -11,7 +11,7 @@ $mediaTinyWidth: 320px;
   overflow: hidden;
 }
 
-.gatsby-image-wrapper {
+#section-1 .gatsby-image-wrapper {
   width: 10em;
   position: absolute !important;
   top: 10rem;
@@ -36,21 +36,21 @@ $mediaTinyWidth: 320px;
 }
 
 @media (max-device-width: $mediaMinWidth) {
-  .gatsby-image-wrapper {
+  #section-1 .gatsby-image-wrapper {
     top: 8rem;
     width: 8em;
   }
 }
 
 @media (max-device-width: $mediaTinyWidth) {
-  .gatsby-image-wrapper {
+  #section-1 .gatsby-image-wrapper {
     width: 7em;
     top: 7rem;
   }
 }
 
 @media (max-device-height: $mediaMinWidth) {
-  .gatsby-image-wrapper {
+  #section-1 .gatsby-image-wrapper {
     width: 7em;
     top: 3em;
   }

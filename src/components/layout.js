@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 
 import Header from "./header";
 import Footer from "./footer";
+import TopBar from "./top-bar";
 import ParticlesBackground from "./particles";
 import "./layout.scss";
 
@@ -40,7 +41,10 @@ const Layout = ({ children }) => (
         <div className="main-content" id="outer-container">
           <ParticlesBackground />
           <Header />
-          <main id="page-wrap">{children}</main>
+          <main id="page-wrap">
+            <TopBar />
+            {children}
+          </main>
           <Footer />
         </div>
       </>
