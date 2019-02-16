@@ -41,9 +41,8 @@ $strokeWidth: 1px;
 /* Second section: */
 
 .description {
-  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  //   Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   padding: 0.7em 0;
   background: #ffffffcf;
   border-radius: 5px;
@@ -138,6 +137,7 @@ $strokeWidth: 1px;
 @media (max-width: $mediaMinWidth) {
   .description {
     font-size: 1.4rem;
+    padding: 0.4em 1em
   }
 
   .broken-grid {

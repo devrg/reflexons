@@ -1,3 +1,9 @@
+$mediaMaxWidth: 1260px;
+$mediaTabletWidth: 960px;
+$mediaStdMobileWidth: 700px;
+$mediaMinWidth: 480px;
+$mediaTinyWidth: 320px;
+
 $headingColor: #eeeeee;
 
 .locate-us {
@@ -18,13 +24,13 @@ iframe {
   width: 400px;
 }
 
-@media (max-device-width: 450px) {
+@media (max-device-width: $mediaMinWidth) {
   iframe {
-    width: 380px;
+    width: 360px;
   }
 }
 
-@media (max-device-width: 350px) {
+@media (max-device-width: $mediaTinyWidth) {
   iframe {
     width: 300px;
   }

@@ -12,9 +12,9 @@ class Header extends Component {
 
     this.state = {
       loaded: false
-    }
+    };
 
-    this.location = '/';
+    this.location = "/";
     this.showSub = false;
 
     this.aboutListRef = React.createRef();
@@ -59,17 +59,22 @@ class Header extends Component {
               className="menu-item sub-menu-trigger"
               onClick={() => {
                 this.showSub = !this.showSub;
-                
+
                 if (this.showSub) {
                   this.aboutListRef.current.style.height = "110px";
-                  this.arrowRef.current.style.transform = "rotate(180deg)"
+                  this.arrowRef.current.style.transform = "rotate(180deg)";
                 } else {
                   this.aboutListRef.current.style.height = "0";
-                  this.arrowRef.current.style.transform = "rotate(0deg)"
+                  this.arrowRef.current.style.transform = "rotate(0deg)";
                 }
               }}
             >
-              About <i className="fas fa-angle-down" style={{marginLeft: '2em'}} ref={this.arrowRef}></i>
+              <i
+                className="fas fa-angle-down"
+                style={{ marginRight: "1em" }}
+                ref={this.arrowRef}
+              />
+              About
             </div>
             <div
               className="sub-menu-list"

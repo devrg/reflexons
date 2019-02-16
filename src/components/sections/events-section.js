@@ -140,7 +140,7 @@ class Events extends Component {
           />
         ))}
 
-        <h1 className="section-heading">The Events</h1>
+        <h1 className="section-heading">Events</h1>
         <div className="broken-grid">
           <div
             className="code-combat"

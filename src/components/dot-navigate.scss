@@ -1,3 +1,8 @@
+$mediaMaxWidth: 1260px;
+$mediaTabletWidth: 960px;
+$mediaStdMobileWidth: 720px;
+$mediaMinWidth: 500px;
+
 .dot-navigate {
   position: relative;
   z-index: 1000;
@@ -71,5 +76,11 @@
   .dot-navigate li {
     width: 14px;
     height: 14px;
+  }
+}
+
+@media (max-width: $mediaMinWidth) {
+  .dot-navigate ul {
+    left: 14px;
   }
 }

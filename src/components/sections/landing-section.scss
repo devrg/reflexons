@@ -2,6 +2,7 @@ $mediaMaxWidth: 1260px;
 $mediaTabletWidth: 960px;
 $mediaStdMobileWidth: 700px;
 $mediaMinWidth: 480px;
+$mediaTinyWidth: 320px;
 
 /* First section: */
 
@@ -21,28 +22,30 @@ $mediaMinWidth: 480px;
 
   img {
     filter: brightness(300%);
-    animation: glow 2s infinite 2.7s;
+    animation: glow 1.5s alternate infinite 2.7s;
   }
 }
 
 @keyframes glow {
-  25% {
-    filter: brightness(300%);
+  0% {    
+    filter: brightness(2.5);
   }
-  50% {
-    filter: brightness(350%);
-  }
-  75% {
-    filter: brightness(350%);
-  }
-  100% {
-    filter: brightness(300%);
+  100% {    
+    filter: brightness(4);
   }
 }
 
 @media (max-device-width: $mediaMinWidth) {
   .gatsby-image-wrapper {
+    top: 8rem;
     width: 8em;
+  }
+}
+
+@media (max-device-width: $mediaTinyWidth) {
+  .gatsby-image-wrapper {
+    width: 7em;
+    top: 7rem;
   }
 }
 
@@ -50,10 +53,6 @@ $mediaMinWidth: 480px;
   .gatsby-image-wrapper {
     width: 7em;
     top: 3em;
-  }
-
-  .fa-caret-down {
-    font-size: 1.4em !important;
   }
 }
 
@@ -68,8 +67,8 @@ $mediaMinWidth: 480px;
 
 .text-scrambler {
   font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 3.5rem;
   color: transparent;
   background: linear-gradient(-45deg, #ffffff, #e73c7e, #46ceff, #ffffff);
@@ -80,14 +79,19 @@ $mediaMinWidth: 480px;
   color: #757575;
 }
 
-.fa-caret-down {
+.arrow-container .fa-angle-down {
   bottom: 2.5em;
   position: absolute;
   font-size: 2.5em;
-  font-weight: 400;
   animation: bounce 1.7s infinite;
   transform: translateX(-50%);
   cursor: pointer;
+}
+
+@media (max-width: $mediaMinWidth) {
+  .arrow-container .fa-angle-down {
+    font-size: 1.4em !important;
+  }
 }
 
 @keyframes bounce {
@@ -110,5 +114,12 @@ $mediaMinWidth: 480px;
   .text-scrambler {
     margin-top: 14rem;
     font-size: 2rem;
+  }
+}
+
+@media (max-width: $mediaMinWidth) {
+  .text-scrambler {
+    font-size: 1.7rem;
+    margin-top: 16rem;
   }
 }

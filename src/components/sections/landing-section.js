@@ -64,8 +64,8 @@ class Landing extends Component {
           }}
         />
         <div className="text-scrambler" ref={this.textScrambler} />
-        <AnchorLink to="section-2" smooth={true} duration={500}>
-          <i className="fas fa-caret-down" />
+        <AnchorLink to="section-2" smooth={true} duration={500} className="arrow-container">
+          <i className="fas fa-angle-down" />
         </AnchorLink>
       </section>
     );
