@@ -36,7 +36,7 @@ class Header extends Component {
             pageWrapId={"page-wrap"}
             outerContainerId={"outer-container"}
             right
-            width={ '260px' }
+            width={"260px"}
             onStateChange={state => {
               if (state.isOpen) {
                 document.querySelector(".bm-burger-button").style.display =
@@ -129,13 +129,21 @@ class Header extends Component {
               className="menu-item sub-menu-trigger"
               onClick={() => {
                 this.showSub = !this.showSub;
-                console.log("click");
-                console.log(this.aboutListRef.current);
-                if (this.showSub)
+
+                if (this.showSub) {
                   this.aboutListRef.current.style.height = "110px";
-                else this.aboutListRef.current.style.height = "0";
+                  this.arrowRef.current.style.transform = "rotate(180deg)";
+                } else {
+                  this.aboutListRef.current.style.height = "0";
+                  this.arrowRef.current.style.transform = "rotate(0deg)";
+                }
               }}
             >
+              <i
+                className="fas fa-angle-down"
+                style={{ marginRight: "1em" }}
+                ref={this.arrowRef}
+              />
               About
             </div>
             <div

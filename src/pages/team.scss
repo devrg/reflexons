@@ -1,0 +1,68 @@
+.Team {
+	background: linear-gradient(#263238, black);
+}
+
+.page-heading {
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	padding: 0.8em;
+	color: #ffffffc5;
+	text-align: center;
+	word-wrap: normal;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .team-member {
+		border-radius: 5px;
+		z-index: 10;
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    width: 16rem;
+    margin: 2rem;
+    text-align: center;
+    background: linear-gradient(#513c4b, #0c101200);
+    color: white;
+
+    .team-member-name,
+    .team-member-roll,
+    .contact-details {
+      padding: 10px 0;
+		}
+
+		.contact-details a {
+			color: #03a9f4;
+		}
+		
+		.team-member-name {
+			margin: 10px;
+			font-weight: 800;
+			font-size: 1.1rem;
+			text-transform: uppercase;
+		}
+
+		.team-member-role {
+			text-transform: uppercase;
+			font-size: 0.9rem;
+
+			&:before {
+				padding: 2px;
+				content: '[';
+			}
+			&:after {
+				padding: 2px;
+				content: ']';
+			}
+		}
+
+    .gatsby-image-wrapper {
+      width: 16rem;
+      height: 16rem;
+    }
+  }
+}

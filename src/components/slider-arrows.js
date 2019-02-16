@@ -7,7 +7,7 @@ export default ({ icon, className, to, onClick }) => (
     className={`button button--text button--icon ${className}`}
     aria-label={to}
     style={{
-      zIndex: "1000",
+      zIndex: "10",
       color: "white",
       fontSize: "3em"
     }}
