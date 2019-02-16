@@ -80,7 +80,7 @@ $mediaTinyWidth: 320px;
 }
 
 .arrow-container .fa-angle-down {
-  bottom: 2.5em;
+  bottom: 4em;
   position: absolute;
   font-size: 2.5em;
   animation: bounce 1.7s infinite;
@@ -100,13 +100,13 @@ $mediaTinyWidth: 320px;
   50%,
   80%,
   100% {
-    bottom: 2.5rem;
+    bottom: 4rem;
   }
   40% {
-    bottom: 4.5rem;
+    bottom: 5rem;
   }
   60% {
-    bottom: 3.5rem;
+    bottom: 4.5rem;
   }
 }
 

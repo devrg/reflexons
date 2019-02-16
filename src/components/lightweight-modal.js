@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import "./lightweight-modal.scss";
+import { Link } from "gatsby";
 
 class LightweightModal extends Component {
   componentDidMount() {
@@ -50,12 +51,13 @@ class LightweightModal extends Component {
             </div>
           </div>
 
-          <button
+          <Link
+            to="/register"
             className="btn btn-lg btn-outline-secondary"
             style={{ fontFamily: this.props.headFont || "Pacifico, curisve" }}
           >
             Register
-          </button>
+          </Link>
         </div>
       </div>
     );
