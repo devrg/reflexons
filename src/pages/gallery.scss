@@ -1,0 +1,46 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.Gallery {
+  picture img {
+    width: max-content !important;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Slick slider customizations: */
+
+.slick-slider div {
+  max-height: 90vh;
+}
+
+.slick-arrow {
+  &:before {
+    display: none;
+  }
+
+  width: auto;
+  height: auto;
+
+  opacity: 0.3;
+  transition: all 0.15s ease-in-out;
+
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 20px;
+}
