@@ -36,6 +36,7 @@ class Header extends Component {
             pageWrapId={"page-wrap"}
             outerContainerId={"outer-container"}
             right
+            width={ '260px' }
             onStateChange={state => {
               if (state.isOpen) {
                 document.querySelector(".bm-burger-button").style.display =
