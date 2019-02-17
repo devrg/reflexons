@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import "./footer.scss";
 
@@ -7,20 +8,56 @@ const Footer = () => (
     <div className="pages-list">
       <div className="list-head">Reflexon Contents</div>
       <ul>
-        <li>Home</li>
-        <li>Events</li>
-        <li>Schedule</li>
-        <li>Gallery</li>
-        <li>Sponsors</li>
+        <li>
+          <Link to="/" className="sky-blue-link">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/#section-2" className="sky-blue-link">
+            Events
+          </Link>
+        </li>
+        <li>
+          <Link to="/#section-3" className="sky-blue-link">
+            Schedule
+          </Link>
+        </li>
+        <li>
+          <Link to="/gallery" className="sky-blue-link">
+            Gallery
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" className="sky-blue-link">
+            About
+          </Link>
+        </li>
       </ul>
     </div>
     <div className="contact-us">
       <div className="list-head">Contact Us</div>
       <ul>
-        <li>(+91)9434538125</li>
-        <li>(+91)8250149961</li>
-        <li>(+91)9874052864</li>
-        <li>reflexons.2019@gmail.com</li>
+        <li>
+          <a href="tel:+919434538125" className="sky-blue-link">
+            (+91)9434538125
+          </a>
+        </li>
+        <li>
+          <a href="tel:+918250149961" className="sky-blue-link">
+            (+91)8250149961
+          </a>
+        </li>
+        <li>
+          <a href="tel:+919874052864" className="sky-blue-link">
+            (+91)9874052864
+          </a>
+        </li>
+        <li>
+          <a href="mailto:reflexons.2019@gmail.com" className="sky-blue-link">
+            reflexons.2019@gmail.com
+          </a>
+        </li>
       </ul>
     </div>
     <div className="info">
@@ -28,9 +65,14 @@ const Footer = () => (
       <br />
       Department of Computer Science and Engineering,
       <br />
-      University of Calcutta, Tech Campus
+      <Link to="/#section-4" className="sky-blue-link">
+        University of Calcutta, Tech Campus
+      </Link>
       <br />
-      Designed by <a href="https://www.nparchments.com">Nabhoneel Majumdar</a>
+      Designed by{" "}
+      <a href="https://www.nparchments.com" className="sky-blue-link">
+        Nabhoneel Majumdar
+      </a>
     </div>
   </footer>
 );
