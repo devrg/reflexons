@@ -158,10 +158,10 @@ class Header extends Component {
                 Team
               </Link>
             </div>
-            <Link to="/sponsors" className="menu-item">
+            <Link to="/" className="menu-item">
               Sponsors
             </Link>
-            <Link to="/contact" className="menu-item">
+            <Link to="/" className="menu-item">
               Contact
             </Link>
             <Link to="/#section-4" className="menu-item">

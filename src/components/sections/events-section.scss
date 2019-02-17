@@ -3,7 +3,7 @@ $mediaTabletWidth: 960px;
 $mediaStdMobileWidth: 720px;
 $mediaMinWidth: 500px;
 
-$elementCount: 7;
+$elementCount: 10;
 $highlightPalette: (
   // #ff5722,
     // #ba68c8,
@@ -41,8 +41,8 @@ $strokeWidth: 1px;
 /* Second section: */
 
 .description {
-  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   padding: 0.7em 0;
   background: #ffffffcf;
   border-radius: 5px;
@@ -101,7 +101,7 @@ $strokeWidth: 1px;
       }
 
       &:hover {
-        color: nth($highlightPalette, $i);
+        // color: nth($highlightPalette, $i);
         // border: 5px solid nth($highlightPalette, $i);
         // border-radius: 20px;
         // padding: 0.5em 1em;
@@ -109,7 +109,7 @@ $strokeWidth: 1px;
         .description {
           border-width: 2px;
           width: auto;
-          color: nth($highlightPalette, $i);
+          // color: nth($highlightPalette, $i);
         }
       }
     }
@@ -137,7 +137,7 @@ $strokeWidth: 1px;
 @media (max-width: $mediaMinWidth) {
   .description {
     font-size: 1.4rem;
-    padding: 0.4em 1em
+    padding: 0.4em 1em;
   }
 
   .broken-grid {

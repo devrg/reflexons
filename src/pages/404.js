@@ -3,42 +3,20 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-// import "./404.scss";
+import "./404.scss";
 
 const NotFoundPage = () => (
   <Layout>
     <div className="not-found">
       <SEO title="404: Not found" />
-      <div className="title-text">Not found</div>
-      <div className="rocket">
-        <div className="rocket-body">
-          <div className="body" />
-          <div className="fin fin-left" />
-          <div className="fin fin-right" />
-          <div className="window" />
-        </div>
-        <div className="exhaust-flame" />
-        <ul className="exhaust-fumes">
-          <li />
-          <li />
-          <li />
-          <li />
-          <li />
-          <li />
-          <li />
-          <li />
-          <li />
-        </ul>
-        <ul className="star">
-          <li />
-          <li />
-          <li />
-          <li />
-          <li />
-          <li />
-          <li />
-        </ul>
+      <div className="poopy-browser">
+        <div class="close" />
+        <div className="minimize" />
+        <div className="maximize" />
+        <div className="address-bar" />
+        <div className="x" />
       </div>
+      <div className="title-text">Sorry, but we're out of content</div>
     </div>
   </Layout>
 );

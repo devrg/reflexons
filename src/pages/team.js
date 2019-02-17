@@ -143,6 +143,15 @@ const Team = props => {
 
   return (
     <Layout>
+      <SEO
+        title="Reflexons 2019 Team"
+        keywords={[
+          "reflexons 2019",
+          "university of calcutta",
+          "annual fest",
+          "computer science"
+        ]}
+      />
       <div className="Team">
         <h1 className="page-heading">Organizing Team</h1>
         <div className="team">
@@ -155,8 +164,12 @@ const Team = props => {
                 <div className="team-member-name">{member.name}</div>
                 <div className="team-member-role">{member.role}</div>
                 <div className="contact-details">
-                  <div className="contact-number"><a href={'tel:' + member.phone}>{member.phone}</a></div>
-                  <div className="email"><a href={'mailto:' + member.email}>{member.email}</a></div>
+                  <div className="contact-number">
+                    <a href={"tel:" + member.phone}>{member.phone}</a>
+                  </div>
+                  <div className="email">
+                    <a href={"mailto:" + member.email}>{member.email}</a>
+                  </div>
                 </div>
               </div>
             );
