@@ -27,7 +27,9 @@ class Register extends Component {
   }
 
   componentDidMount() {
-    this.setState({ event: this.props.location.state.slug });
+    if (this.props.location.state !== null) {
+      this.setState({ event: this.props.location.state.slug });
+    }
   }
 
   verify(fields) {
