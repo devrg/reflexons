@@ -24,6 +24,7 @@ class Location extends Component {
             />
           </div>
         </div>
+        <div className="location-description">(Block) JD-2, Salt Lake City, Sector 3, Kolkata - 700106</div>
       </section>
     );
   }

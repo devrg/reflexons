@@ -62,7 +62,7 @@ class Header extends Component {
                 this.showSub = !this.showSub;
 
                 if (this.showSub) {
-                  this.aboutListRef.current.style.height = "110px";
+                  this.aboutListRef.current.style.height = "200px";
                   this.arrowRef.current.style.transform = "rotate(180deg)";
                 } else {
                   this.aboutListRef.current.style.height = "0";
@@ -82,6 +82,9 @@ class Header extends Component {
               ref={this.aboutListRef}
               style={{ height: "0" }}
             >
+              <Link to="/about" className="sub-menu bm-item">
+                About Reflexons
+              </Link>
               <Link to="/gallery" className="sub-menu bm-item">
                 Gallery
               </Link>
@@ -131,7 +134,7 @@ class Header extends Component {
                 this.showSub = !this.showSub;
 
                 if (this.showSub) {
-                  this.aboutListRef.current.style.height = "110px";
+                  this.aboutListRef.current.style.height = "200px";
                   this.arrowRef.current.style.transform = "rotate(180deg)";
                 } else {
                   this.aboutListRef.current.style.height = "0";
@@ -151,6 +154,9 @@ class Header extends Component {
               ref={this.aboutListRef}
               style={{ height: "0" }}
             >
+              <Link to="/about" className="sub-menu bm-item">
+                About Reflexons
+              </Link>
               <Link to="/gallery" className="sub-menu bm-item">
                 Gallery
               </Link>
