@@ -658,6 +658,7 @@ class Events extends Component {
             <div className="disclaimer">
               Each student must carry their college ID with themselves
             </div>
+
             <table className="table">
               <tbody>
                 <tr>
@@ -684,7 +685,7 @@ class Events extends Component {
                   <td className="serial-number">4</td>
                   <td className="detail">
                     Each participants will be provided a stable internet
-                    connection{" "}
+                    connection
                   </td>
                 </tr>
                 <tr>
@@ -737,12 +738,12 @@ class Events extends Component {
                 </tr>
                 <tr>
                   <td className="serial-number">1st Round</td>
-                  <td className="detail">1st Round : 1 match (Erangel) </td>
+                  <td className="detail">1st Round : 1 match (Erangel)</td>
                 </tr>
                 <tr>
                   <td className="serial-number">2nd Round</td>
                   <td className="detail">
-                    2nd Round : 3 matches -&gt; Erangel,Miramar,Sanhok
+                    2nd Round : 3 matches -> Erangel,Miramar,Sanhok
                   </td>
                 </tr>
               </tbody>
@@ -757,12 +758,12 @@ class Events extends Component {
               <table>
                 <tbody>
                   <tr>
-                    <td className="event-coordinator">Subhajit Gupta</td>
-                    <td className="event-coordinator-contact">79081 80691</td>
+                    <td className="event-coordinator">Ashita Gupta</td>
+                    <td className="event-coordinator-contact">98308 78897</td>
                   </tr>
                   <tr>
-                    <td className="event-coordinator">Shubham Kumar Das</td>
-                    <td className="event-coordinator-contact">85830 57474</td>
+                    <td className="event-coordinator">Hiya Das </td>
+                    <td className="event-coordinator-contact">94759 16985</td>
                   </tr>
                 </tbody>
               </table>

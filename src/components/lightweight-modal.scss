@@ -152,6 +152,10 @@ $dividerWidth: 3px;
   border-bottom-right-radius: 0.4rem;
 }
 
+td.detail {
+  max-width: 10rem;
+}
+
 @for $i from 1 to 4 {
   .info-set > div:nth-child(#{$i}) {
     background-color: nth($list: $pallete, $n: $i + 4);
@@ -159,10 +163,11 @@ $dividerWidth: 3px;
 }
 
 .details {
-  tr:nth-child(1) > td, th {
-    border-top: none !important;    
+  tr:nth-child(1) > td,
+  th {
+    border-top: none !important;
   }
-  
+  max-width: 100%;
   background-color: nth($pallete, 8);
   flex-direction: column;
   padding: 1rem 1rem;
@@ -178,8 +183,8 @@ $dividerWidth: 3px;
   .event-coordinator {
     text-align: left;
     padding-right: 0.5em;
-  } 
-  
+  }
+
   .event-coordinator-contact {
     text-align: right;
     padding-left: 0.5em;
@@ -192,6 +197,7 @@ $dividerWidth: 3px;
 
   .serial-number {
     text-align: left;
+    // transform: rotate(270deg);
   }
 
   .detail {
@@ -202,7 +208,7 @@ $dividerWidth: 3px;
 @media (max-device-width: $mediaTinyWidth) {
   .details {
     padding: 0;
-    
+
     .disclaimer {
       border-radius: 0;
     }
