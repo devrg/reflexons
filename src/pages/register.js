@@ -19,11 +19,15 @@ class Register extends Component {
       email: "",
       teamsize: "",
       teammembers: "",
-      event: this.props.location.state.slug
+      event: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({ event: this.props.location.state.slug });
   }
 
   verify(fields) {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Img from "gatsby-image";
-import { Link, StaticQuery } from "gatsby";
+import { Link, StaticQuery, graphql } from "gatsby";
 
 import "./top-bar.scss";
 
