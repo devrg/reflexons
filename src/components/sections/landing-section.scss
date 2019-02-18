@@ -9,6 +9,7 @@ $mediaTinyWidth: 320px;
 #section-1 {
   padding-top: 0;
   overflow: hidden;
+  z-index: -1;
 }
 
 #section-1 .gatsby-image-wrapper {
@@ -27,10 +28,10 @@ $mediaTinyWidth: 320px;
 }
 
 @keyframes glow {
-  0% {    
+  0% {
     filter: brightness(2.5);
   }
-  100% {    
+  100% {
     filter: brightness(4);
   }
 }
@@ -80,7 +81,7 @@ $mediaTinyWidth: 320px;
 }
 
 .arrow-container .fa-angle-down {
-  bottom: 4em;
+  bottom: 2em;
   position: absolute;
   font-size: 2.5em;
   animation: bounce 1.7s infinite;
@@ -90,7 +91,22 @@ $mediaTinyWidth: 320px;
 
 @media (max-width: $mediaMinWidth) {
   .arrow-container .fa-angle-down {
+    animation: none !important;
     font-size: 1.4em !important;
+  }
+}
+
+@media (max-device-height: 420px) {
+  .gatsby-image-wrapper {
+    width: 9rem !important;
+  }
+
+  .text-scrambler {
+    font-size: 1.6rem !important;
+  }
+
+  .arrow-container .fa-angle-down {
+    display: none;
   }
 }
 

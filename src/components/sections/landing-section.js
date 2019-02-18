@@ -14,10 +14,10 @@ class Landing extends Component {
     this.phrases = [
       "Hello world",
       "Welcome to the 35th Reflexon",
-      "Annual reunion and tech fest",
-      "Department of Computer Science",
-      "University of Calcutta",
-      "11th to 17th March"
+      "The annual reunion and tech fest",
+      "of the Department of Computer Science",
+      "at the University of Calcutta",
+      "from 11th to 17th March"
     ];
 
     this.textScrambler = React.createRef();

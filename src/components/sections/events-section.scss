@@ -1,7 +1,8 @@
 $mediaMaxWidth: 1260px;
 $mediaTabletWidth: 960px;
-$mediaStdMobileWidth: 720px;
-$mediaMinWidth: 500px;
+$mediaStdMobileWidth: 768px;
+$mediaMobileLargeWidth: 500px;
+// $mediaMinWidth: 500px;
 
 $elementCount: 10;
 $highlightPalette: (
@@ -40,128 +41,209 @@ $strokeWidth: 1px;
 
 /* Second section: */
 
-.description {
-  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  padding: 0.7em 0;
-  background: #ffffffcf;
-  border-radius: 5px;
-  color: black !important;
-  padding: 0.7em 1em;
+$headingColor: #008cff;
 
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-
-  border: 5px solid #888888c9;
-
-  transition: all 0.3s ease-in-out;
-
-  i {
-    padding-left: 0.8em;
-  }
-
+#section-3 .section-heading {
+  color: $headingColor;
+  &:before,
   &:after {
-    content: "";
-    border-bottom: 10px solid yellow;
+    background-color: $headingColor;
   }
 }
 
-.broken-grid {
-  max-width: 70rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 8rem 5rem;
+$timelineSpineColor: #3ae1ff;
 
-  div {
-    align-self: center;
-    transition: all 0.3s ease-in-out;
-    cursor: zoom-in;
-    margin: 0.7rem 0.5rem;
+.timeline {
+  border-left: 4px solid $timelineSpineColor;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 50px auto;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.4rem;
+  padding: 50px;
+  list-style: none;
+  text-align: left;
+  font-weight: 100;
+  max-width: 80%;
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    letter-spacing: -0.4px;
+    font-weight: 400;
+    font-size: 1.4em;
   }
 
-  @for $i from 1 to $elementCount + 1 {
-    div:nth-child(#{$i}) {
-      .description {
-        color: white; // nth($list: $palette, $n: $i);
-      }
+  .event {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    position: relative;
+    width: 25rem;
 
-      &:before:hover {
-        $strokeColour: white;
+    .events {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-        &:before {
-          text-shadow: $strokeWidth $strokeWidth 0 $strokeColour,
-            -$strokeWidth #{-$strokeWidth} 0 $strokeColour,
-            $strokeWidth -$strokeWidth 0 $strokeColour,
-            -$strokeWidth $strokeWidth 0 $strokeColour,
-            $strokeWidth $strokeWidth 0 $strokeColour !important;
+      h3 {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          text-align: left;
+        }
+
+        button {
+          border-color: white !important;
+          color: white !important;
+          margin: 0 0.5em;
+          display: inline-block;
+          position: relative;
+          transition: all 0.5s;
+
+          &::after {
+            content: "\00bb";
+            color: black;
+            position: absolute;
+            opacity: 0;
+            right: -20px;
+            transition: all 0.3s;
+          }
+        }
+        button:hover {
+          padding-right: 20px;
+          border-color: black !important;
+          color: black !important;
+          &:after {
+            opacity: 1;
+            right: 7px;
+          }
         }
       }
+    }
 
-      &:hover {
-        // color: nth($highlightPalette, $i);
-        // border: 5px solid nth($highlightPalette, $i);
-        // border-radius: 20px;
-        // padding: 0.5em 1em;
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: none;
+    }
 
-        .description {
-          border-width: 2px;
-          width: auto;
-          // color: nth($highlightPalette, $i);
-        }
+    &:after,
+    &:before {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    &:before {
+      right: -140px;
+      transform: rotate(90deg);
+      color: #ffffff;
+      content: attr(data-date);
+      text-align: right;
+      font-weight: 300;
+      font-size: 0.9em;
+      min-width: 120px;
+      font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+
+    &:after {
+      box-shadow: 0 0 0 4px $timelineSpineColor;
+      left: -57.85px;
+      background: #313534;
+      border-radius: 50%;
+      height: 11px;
+      width: 11px;
+      content: "";
+      top: 5px;
+    }
+  }
+}
+
+@media (max-device-width: $mediaMaxWidth) {
+  .timeline {
+    font-size: 1.5rem;
+    padding: 28px;
+
+    .event {
+      &:after {
+        left: -35.85px;
+      }
+      &:before {
+        right: -110px;
       }
     }
   }
 }
 
-@media (max-width: $mediaMaxWidth) {
-  .broken-grid div {
-    // margin: 1rem !important;
-  }
+@media (max-device-width: $mediaTabletWidth) {
 }
 
-@media (max-width: $mediaTabletWidth) {
-  .broken-grid {
-    padding: 5rem 3rem;
+@media (max-device-width: $mediaStdMobileWidth) {
+  #section-2 {
+    padding: 2em;
   }
-}
 
-@media (max-width: $mediaStdMobileWidth) {
-  .broken-grid div {
-    // margin: 1rem 0.5rem;
-  }
-}
-
-@media (max-width: $mediaMinWidth) {
-  .description {
+  .timeline {
     font-size: 1.4rem;
-    padding: 0.4em 1em;
-  }
+    .event {
+      width: 100%;
 
-  .broken-grid {
-    padding: 5rem 0;
-  }
-
-  .broken-grid div {
-    // margin: 1rem 0.3rem !important;
+      button {
+        margin-right: 1em !important;
+        margin-left: 2em !important;
+      }
+    }
   }
 }
 
-$rotateDegree: 2deg;
+@media (max-device-width: $mediaMobileLargeWidth) {
+  #section-2 {
+    padding: 2em 2em;
+  }
 
-@keyframes jelly {
-  0%,
-  50%,
-  80%,
-  100% {
-    transform: rotate(0deg);
-  }
-  40% {
-    transform: rotate(-$rotateDegree);
-  }
-  80% {
-    transform: rotate($rotateDegree);
+  .timeline {
+    font-size: 1rem;
+    padding: 20px;
+
+    h3,
+    p {
+      text-align: center;
+    }
+
+    .event {
+      h3 {
+        justify-content: center !important;
+      }
+
+      span {
+        width: 100%;
+        text-align: center !important;
+      }
+
+      button {
+        margin: 1em 0 !important;
+      }
+
+      &:after {
+        left: -28px;
+      }
+      &:before {
+        right: -98px;
+      }
+    }
   }
 }

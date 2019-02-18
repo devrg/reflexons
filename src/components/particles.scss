@@ -30,12 +30,12 @@ $time-4: 600s;
 }
 
 .page-bg {
-  background: $color-bg
+  // background: $color-bg
     // url("https://images.unsplash.com/photo-1467281352684-9d059d88adc5?dpr=1&auto=format&fit=crop&w=1920&h=1080&q=100&cs=tinysrgb&crop=")
-    no-repeat top center;
+    // no-repeat top center;
   background-blend-mode: screen;
   background-size: cover;
-  filter: grayscale(100%);
+  filter: grayscale(0) brightness(0.5);
   z-index: -1;
 }
 
