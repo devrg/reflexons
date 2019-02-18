@@ -69,7 +69,7 @@ $strokeWidth: 1px;
 }
 
 .broken-grid {
-  width: 100%;
+  max-width: 70rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
