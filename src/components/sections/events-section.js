@@ -984,6 +984,54 @@ class Events extends Component {
       }
     ];
 
+    this.eventCards = [
+      {
+        dataID: "code-combat",
+        text: "Code Combat",
+        icon: <i className="fas fa-code" />
+      },
+      {
+        dataID: "code-beta",
+        text: "Code Beta",
+        icon: <i className="fas fa-terminal" />
+      },
+      {
+        dataID: "bug-hunt",
+        text: "Bug Hunt",
+        icon: <i className="fas fa-bug" />
+      },
+      {
+        dataID: "quiz",
+        text: "Quiz",
+        icon: <i className="fas fa-question-circle" />
+      },
+      {
+        dataID: "debate",
+        text: "Debate",
+        icon: <i className="fas fa-diagnoses" />
+      },
+      {
+        dataID: "photography",
+        text: "Photograph",
+        icon: <i className="fas fa-camera-retro" />
+      },
+      {
+        dataID: "pubg",
+        text: "PUBG",
+        icon: <i className="fas fa-hard-hat" />
+      },
+      {
+        dataID: "csgo",
+        text: "Counter Strike: Go",
+        icon: <i className="fas fa-gamepad" />
+      },
+      {
+        dataID: "line",
+        text: "Follow The Line",
+        icon: <i className="fas fa-robot" />
+      }
+    ];
+
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -1043,69 +1091,124 @@ class Events extends Component {
         ))}
 
         <h1 className="section-heading">Events</h1>
-        <div className="broken-grid">
-          <div
-            className="code-combat"
-            data-id="code-combat"
-            onClick={this.handleClick}
-          >
-            <div className="description">
-              <i className="fas fa-code" /> code combat
+
+        <ul className="timeline">
+          <li className="event" data-date="Monday">
+            <p>11 - 03 - 2019</p>
+            <div className="events">
+              <h3>
+                <span>Bug hunt</span>
+                <button
+                  className="btn btn-outline-warning"
+                  data-id="bug-hunt"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button>
+              </h3>
+              <h3>
+                <span>Debate</span>
+                <button
+                  className="btn btn-outline-warning"
+                  data-id="debate"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button>
+              </h3>
             </div>
-          </div>
-          <div
-            className="code-beta"
-            data-id="code-beta"
-            onClick={this.handleClick}
-          >
-            <div className="description">
-              <i className="fas fa-terminal" /> code beta
+          </li>
+          <li className="event" data-date="Tuesday">
+            <p>12 - 03 - 2019</p>
+            <div className="events">
+              <h3>
+                <span>Photography</span>
+                <button
+                  className="btn btn-outline-warning"
+                  data-id="photography"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button>
+              </h3>
+              <h3>
+                <span>Follow the line</span>
+                <button
+                  className="btn btn-outline-warning"
+                  data-id="line"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button>
+              </h3>
             </div>
-          </div>
-          <div
-            className="bug-hunt"
-            data-id="bug-hunt"
-            onClick={this.handleClick}
-          >
-            <div className="description">
-              <i className="fas fa-bug" /> bug hunt
+          </li>
+          <li className="event" data-date="Wednesday">
+            <p>13 - 03 - 2019</p>
+            <div className="events">
+              <h3>
+                <span>Code Beta</span>
+                <button
+                  className="btn btn-outline-warning"
+                  data-id="code-beta"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button>
+              </h3>
+              <h3>
+                <span>Quiz</span>
+                <button
+                  className="btn btn-outline-warning"
+                  data-id="quiz"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button>
+              </h3>
             </div>
-          </div>
-          <div className="debate" data-id="debate" onClick={this.handleClick}>
-            <div className="description">
-              <i className="fas fa-diagnoses" /> debate
+          </li>
+          <li className="event" data-date="Thursday">
+            <p>14 - 03 - 2019</p>
+            <div className="events">
+              <h3>
+                <span>Code Combat</span>
+                <button
+                  className="btn btn-outline-warning"
+                  data-id="code-combat"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button>
+              </h3>
             </div>
-          </div>
-          <div className="quiz" data-id="quiz" onClick={this.handleClick}>
-            <div className="description">
-              <i className="fas fa-question-circle" /> quiz
+          </li>
+          <li className="event" data-date="Friday">
+            <p>15 - 03 - 2019</p>
+            <div className="events">
+              <h3>
+                <span>PUBG</span>
+                <button
+                  className="btn btn-outline-warning"
+                  data-id="pubg"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button>
+              </h3>
+              <h3>
+                <span>Counter Strike: Go</span>
+                <button
+                  className="btn btn-outline-warning"
+                  data-id="csgo"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button>
+              </h3>
             </div>
-          </div>
-          <div
-            className="photography"
-            data-id="photography"
-            onClick={this.handleClick}
-          >
-            <div className="description">
-              <i className="fas fa-camera-retro" /> photography
-            </div>
-          </div>
-          <div className="pubg" data-id="pubg" onClick={this.handleClick}>
-            <div className="description">
-              <i className="fas fa-hard-hat" /> PUBG
-            </div>
-          </div>
-          <div className="csgo" data-id="csgo" onClick={this.handleClick}>
-            <div className="description">
-              <i className="fas fa-gamepad" /> Counter Strike: Go
-            </div>
-          </div>
-          <div className="line" data-id="line" onClick={this.handleClick}>
-            <div className="description">
-              <i className="fas fa-robot" /> Follow The Line
-            </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
     );
   }

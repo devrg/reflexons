@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import CU from "../images/cu-top.jpg";
+import CU from "../images/cu-class.jpg";
 
 import "./about.scss";
 
@@ -12,7 +12,7 @@ const About = () => (
   <div
     className="about-page"
     style={{
-      background: `linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.68)),url(${CU}) background fixed`
+      background: `linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.68)),url(${CU}) center fixed`
     }}
   >
     <SEO title="About" />

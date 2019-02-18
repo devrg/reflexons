@@ -1,10 +1,11 @@
 import React from "react";
 
 import './particles.scss';
+import CU from '../images/logo.png';
 
 const Particles = () => (
   <>
-    <div className="page-bg" />
+    <div className="page-bg" style={{ background: `#000 url(${CU}) no-repeat center center`}} />
 
     <div className="animation-wrapper">
       <div className="particle particle-1" />
