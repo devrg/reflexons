@@ -57,6 +57,9 @@ typings/
 # gatsby files
 .cache/
 public
+gatsby-ssr.js
+gatsby-node.js
+gatsby-browser.js
 
 # Mac files
 .DS_Store
@@ -69,3 +72,4 @@ yarn-error.log
 .yarn-integrity
 
 bin
+server.php
