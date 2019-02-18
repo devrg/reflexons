@@ -92,7 +92,7 @@ const Team = props => {
     {
       id: "tripti",
       name: "Tripti Guha",
-      role: "General Secretary",
+      role: "Member",
       phone: "",
       email: "",
       image: {}
