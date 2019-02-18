@@ -1,6 +1,6 @@
 # Reflexons 2019's Website
 <p align="center">
-  <a href="https://www.nparchments.com">
+  <a href="https://www.reflexons.cucse.org/">
     <img src="https://github.com/nabhoneel/reflexons/raw/master/src/images/logo.png" alt="reflexons 2019 logo"/>
   </a>
 </p>
