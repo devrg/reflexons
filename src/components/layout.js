@@ -44,8 +44,8 @@ const Layout = ({ children }) => (
           <main id="page-wrap">
             <TopBar />
             {children}
+            <Footer />
           </main>
-          <Footer />
         </div>
       </>
     )}

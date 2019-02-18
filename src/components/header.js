@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import { Link as AnchorLink } from "react-scroll";
 import React, { Component } from "react";
 
-import { push as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 
 import "./header.scss";
 
