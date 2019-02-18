@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
+import firebase from "../components/config/Firebase";
+import "firebase/database";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -17,68 +18,175 @@ class Register extends Component {
       year: "",
       phone: "",
       email: "",
-      teamsize: "",
+      teamSize: "",
       teammembers: "",
       event: ""
     };
 
+    this.maxTeamSize = this.props.maxTeam;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
-    if (this.props.location.state !== null) {
+    if (this.props.location.state !== null)
       this.setState({ event: this.props.location.state.slug });
+
+    if (this.props.location.state !== null) {
+      this.maxTeamSize = this.props.location.state.maxTeam;
+      console.log("team size: " + this.props.location.state.maxTeam);
     }
+
+    this.register = firebase.database().ref("registrations");
+  }
+
+  displaySuccess(message) {
+    const successContainer = document.querySelector(".success-msg");
+    successContainer.innerHTML = message;
+    successContainer.style.height = "auto";
+    successContainer.style.display = "block";
+    setTimeout(() => {
+      successContainer.style.height = "0";
+      successContainer.style.display = "none";
+    }, 3000);
+  }
+
+  displayError(message) {
+    const errorContainer = document.querySelector(".error-msg");
+    errorContainer.innerHTML = message;
+    errorContainer.style.height = "auto";
+    errorContainer.style.display = "block";
+    setTimeout(() => {
+      errorContainer.style.height = "0";
+      errorContainer.style.display = "none";
+    }, 3000);
   }
 
   verify(fields) {
+    // name:
+    if (fields.name === "") {
+      this.displayError("Enter your name");
+      return false;
+    }
+
+    // institution:
+    if (fields.institution === "") {
+      this.displayError("Enter your institution's name");
+      return false;
+    }
+
+    // stream:
+    if (fields.stream === "") {
+      this.displayError("Enter your field's name");
+      return false;
+    }
+
+    // course:
+    if (fields.course === "") {
+      this.displayError("Enter your course name");
+      return false;
+    }
+
+    // year of study:
+    if (fields.year === "") {
+      this.displayError("Enter the year of studies at your institution");
+      return false;
+    } else if (isNaN(fields.year)) {
+      this.displayError("Enter a valid year of study (between 1 and 5)");
+      return false;
+    } else if (!/[1-5]/.test(fields.year)) {
+      this.displayError("Years of studying should be between 1 and 5");
+      return false;
+    }
+
+    // phone number:
+    if (fields.phone === "") {
+      this.displayError("Enter a phone number (for contacting you)");
+      return false;
+    } else if (fields.phone.length !== 10) {
+      this.displayError("Enter a 10 digit phone number");
+      return false;
+    } else if (!/^\d+$/.test(fields.phone)) {
+      this.displayError("Enter a valid phone number");
+      return false;
+    }
+
+    // email id:
+    if (fields.email === "") {
+      this.displayError("Enter an email address (for contacting you)");
+      return false;
+    } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(fields.email)) {
+      this.displayError("Enter a valid email address");
+      return false;
+    }
+
+    // team size:
+    if (fields.teamSize === "") {
+      this.displayError("Enter your team's size");
+      return false;
+    } else if (isNaN(fields.teamSize)) {
+      this.displayError(
+        "Enter your team's size in digits (between 1 and " +
+          this.maxTeamSize +
+          ")"
+      );
+      return false;
+    } else if (
+      parseInt(fields.teamSize) < 1 ||
+      parseInt(fields.teamSize) > this.maxTeamSize
+    ) {
+      this.displayError(
+        "Your team's size should be between 1 and " + this.maxTeamSize
+      );      
+      return false;
+    }
+
+    if(this.maxTeamSize !== 1 && fields.teammembers === "") {
+      this.displayError("Enter your team member(s)'(s) names");
+      return false;
+    }
+
+    // valid:
     return true;
   }
 
   async handleSubmit(event) {
     event.preventDefault();
-    const data = this.state;
-    let res = null;
-    let status = false;
-    console.log(this.state);
-    if (this.verify(this.state)) {
-      try {
-        res = await axios.post(
-          "https://formsubmitreflexon.000webhostapp.com/server.php",
-          {
-            name: data.name,
-            insti: data.institution,
-            stream: data.stream,
-            cor: data.course,
-            year: data.year,
-            phno: data.phone,
-            email: data.email,
-            events: data.event,
-            teamsize: data.teamsize,
-            teammember: data.teammembers
-          }
-        );
-      } catch (error) {
-        const errorContainer = document.querySelector(".error-msg");
-        errorContainer.innerHTML = "Sorry, your entry could not be submitted";
-        errorContainer.style.height = "auto";
-        errorContainer.style.padding = "1rem";
-        setTimeout(() => {
-          errorContainer.style.height = "0";
-          errorContainer.style.padding = "0";
-        }, 3000);
-        console.log(error);
-      }
-      console.log(res);
-    } else {
-      const errorContainer = document.querySelector(".error-msg");
-      errorContainer.style.height = "auto";
-      errorContainer.style.padding = "1rem";
-      setTimeout(() => {
-        errorContainer.style.height = "0";
-        errorContainer.style.padding = "0";
-      }, 3000);
+    const data = { ...this.state };
+
+    if (this.verify(data)) {
+      const newReg = firebase
+        .database()
+        .ref("registrations")
+        .push();
+      newReg.set({
+        name: data.name,
+        institution: data.institution,
+        stream: data.stream,
+        course: data.course,
+        year: data.year,
+        phone: data.phone,
+        email: data.email,
+        event: data.event,
+        teamSize: data.teamSize,
+        teamMembers: data.teammembers
+      });
+
+      this.setState({
+        name: "",
+        institution: "",
+        stream: "",
+        course: "",
+        year: "",
+        phone: "",
+        email: "",
+        teamSize: "",
+        teammembers: "",
+      })
+
+      this.displaySuccess(
+        "Thank you for registering! We will get back to you soon."
+      );
     }
   }
 
@@ -107,7 +215,7 @@ class Register extends Component {
         this.setState({ email: event.target.value });
         break;
       case "teamsize":
-        this.setState({ teamsize: event.target.value });
+        this.setState({ teamSize: event.target.value });
         break;
       case "teammember":
         this.setState({ teammembers: event.target.value });
@@ -151,7 +259,6 @@ class Register extends Component {
                 placeholder="Enter Name"
                 onChange={this.handleChange}
                 value={this.state.name}
-                required
               />
               <span className="focus-border" />
               <input
@@ -161,7 +268,6 @@ class Register extends Component {
                 placeholder="Name Of Institution"
                 onChange={this.handleChange}
                 value={this.state.institution}
-                required
               />
               <input
                 className="input-field"
@@ -170,7 +276,6 @@ class Register extends Component {
                 placeholder="Enter Your Stream"
                 onChange={this.handleChange}
                 value={this.state.stream}
-                required
               />
               <input
                 className="input-field"
@@ -179,16 +284,14 @@ class Register extends Component {
                 placeholder="Enter Your Course"
                 onChange={this.handleChange}
                 value={this.state.course}
-                required
               />
               <input
                 className="input-field"
-                type="number"
+                type="text"
                 name="year"
-                placeholder="Enter Year Of Study"
+                placeholder="Enter your year of studies (at your institute)"
                 onChange={this.handleChange}
                 value={this.state.year}
-                required
               />
               <input
                 className="input-field"
@@ -197,7 +300,6 @@ class Register extends Component {
                 placeholder="Enter Your Phone Number"
                 onChange={this.handleChange}
                 value={this.state.phone}
-                required
               />
               <input
                 className="input-field"
@@ -206,31 +308,29 @@ class Register extends Component {
                 placeholder="Enter Your Email ID"
                 onChange={this.handleChange}
                 value={this.state.email}
-                required
               />
               <input
                 className="input-field"
-                type="number"
-                max="4"
-                min="1"
                 name="teamsize"
                 placeholder="# of Team Members"
                 onChange={this.handleChange}
-                value={this.state.teamsize}
-                required
+                value={this.state.teamSize}
               />
               <input
                 className="input-field"
-                type="text"
                 name="teammember"
                 placeholder="Enter Name Of Team Members"
                 onChange={this.handleChange}
                 value={this.state.teammembers}
-                required
               />
-              <div className="error-msg" style={{ height: 0, padding: "0" }}>
-                Please check all the fields before submitting
-              </div>
+              <div
+                className="error-msg"
+                style={{ height: 0, display: "none" }}
+              />
+              <div
+                className="success-msg"
+                style={{ height: 0, display: "none" }}
+              />
               <input
                 className="input-field submit-button btn btn-lg btn-outline-success"
                 type="submit"

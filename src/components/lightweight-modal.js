@@ -45,7 +45,11 @@ class LightweightModal extends Component {
               </div>
             </div>
             <div className="details">
-              {this.props.languages ? <div>Languages allowed: {this.props.languages}</div> : ""}
+              {this.props.languages ? (
+                <div>Languages allowed: {this.props.languages}</div>
+              ) : (
+                ""
+              )}
               {this.props.details ? (
                 <div style={{ padding: 0 }}>{this.props.details}</div>
               ) : (
@@ -59,7 +63,11 @@ class LightweightModal extends Component {
             <Link
               to="/register"
               className="btn btn-lg btn-outline-primary"
-              state={{ event: this.props.modalHeading, slug: this.props.slug }}
+              state={{
+                event: this.props.modalHeading,
+                slug: this.props.slug,
+                maxTeam: this.props.maxTeam
+              }}
             >
               Register
             </Link>
