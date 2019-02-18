@@ -58,15 +58,6 @@ class Header extends Component {
               Events
             </Link>
           )}
-          {this.location === "/" ? (
-            <AnchorLink to="section-3" className="menu-item">
-              Schedule
-            </AnchorLink>
-          ) : (
-            <Link to="/#section-3" className="menu-item">
-              Schedule
-            </Link>
-          )}
           <Link to="/register" className="menu-item">
             Register
           </Link>

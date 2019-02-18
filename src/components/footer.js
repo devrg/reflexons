@@ -19,11 +19,6 @@ const Footer = () => (
           </Link>
         </li>
         <li>
-          <Link to="/#section-3" className="sky-blue-link">
-            Schedule
-          </Link>
-        </li>
-        <li>
           <Link to="/gallery" className="sky-blue-link">
             Gallery
           </Link>
