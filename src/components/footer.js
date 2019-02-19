@@ -66,7 +66,7 @@ const Footer = () => (
       </Link>
       <br />
       Designed by{" "}
-      <OutboundLink href="https://www.nparchments.com" className="sky-blue-link">
+      <OutboundLink href="https://www.nparchments.com" target="_blank" className="sky-blue-link">
         Nabhoneel Majumdar
       </OutboundLink>
     </div>
