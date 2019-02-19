@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Reflexons 2019`,
-    description: `A reunion + annual fest of the department of Computer Science and Engineering at the University of Calcutta`,
+    description: `The annual reunion and fest of the department of Computer Science and Engineering at the University of Calcutta`,
     author: `@nabhoneel`,
     siteUrl: 'https://www.reflexons.cucse.org'
   },

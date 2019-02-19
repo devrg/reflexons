@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "reflexons-2019",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The annual reunion and fest of the department of Computer Science and Engineering at the University of Calcutta",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Nabhoneel Majumdar <email@nparchments@gmail.com>",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.0",

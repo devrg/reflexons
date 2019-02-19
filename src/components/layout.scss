@@ -8,6 +8,10 @@ $mediaMinWidth: 480px;
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+.main-content {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   background: black;
