@@ -3,7 +3,7 @@ module.exports = {
     title: `Reflexons 2019`,
     description: `The annual reunion and fest of the department of Computer Science and Engineering at the University of Calcutta`,
     author: `@nabhoneel`,
-    siteUrl: 'https://www.reflexons.cucse.org'
+    siteUrl: "https://reflexons.cucse.org"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,8 +11,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -25,10 +25,18 @@ module.exports = {
         background_color: `#000`,
         theme_color: `#000`,
         display: `standalone`,
-        icon: `src/images/logo.png`,
-      },
+        icon: `src/images/logo.png`
+      }
     },
-    'gatsby-plugin-sass'
+    "gatsby-plugin-sass",
     // 'gatsby-plugin-offline',
-  ],
-}
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-134714076-1`,
+        head: true,
+        anonymize: true
+      }
+    }
+  ]
+};

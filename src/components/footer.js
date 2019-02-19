@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-gtag";
 
 import "./footer.scss";
 
@@ -65,9 +66,9 @@ const Footer = () => (
       </Link>
       <br />
       Designed by{" "}
-      <a href="https://www.nparchments.com" className="sky-blue-link">
+      <OutboundLink href="https://www.nparchments.com" className="sky-blue-link">
         Nabhoneel Majumdar
-      </a>
+      </OutboundLink>
     </div>
   </footer>
 );
