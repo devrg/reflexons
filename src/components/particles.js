@@ -1,19 +1,25 @@
 import React from "react";
 
-import './particles.scss';
-import CU from '../images/logo.png';
+import "./particles.scss";
+import CU from "../images/logo.png";
 
-const Particles = () => (
-  <>
-    <div className="page-bg" style={{ background: `#000 url(${CU}) no-repeat center center`}} />
+console.log(window.location.pathname);
 
-    <div className="animation-wrapper">
-      <div className="particle particle-1" />
-      <div className="particle particle-2" />
-      <div className="particle particle-3" />
-      <div className="particle particle-4" />
-    </div>
-  </>
-);
+const Particles = () => {
+  return (
+    <>
+      <div
+        className="page-bg"
+        style={{ background: `#000 url(${CU}) no-repeat center center` }}
+      />
+      <div className="animation-wrapper">
+        <div className="particle particle-1" />
+        <div className="particle particle-2" />
+        <div className="particle particle-3" />
+        <div className="particle particle-4" />
+      </div>
+    </>
+  );
+}
 
 export default Particles;

@@ -39,8 +39,8 @@ const Layout = ({ children }) => (
         </Helmet>
 
         <div className="main-content" id="outer-container">
-          <ParticlesBackground />
           <Header />
+          <ParticlesBackground />
           <main id="page-wrap">
             <TopBar />
             {children}

@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Reflexons 2019`,
         short_name: `Reflexons 2019`,
         start_url: `/`,
         background_color: `#000`,
