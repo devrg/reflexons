@@ -3,8 +3,6 @@ import React from "react";
 import "./particles.scss";
 import CU from "../images/logo.png";
 
-console.log(window.location.pathname);
-
 const Particles = () => {
   return (
     <>

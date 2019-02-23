@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'gatsby';
+import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -19,6 +19,14 @@ const About = () => (
     <Layout>
       <div className="about-text">
         <div className="heading-text">About Reflexons 2019</div>
+        <iframe
+          src="https://player.vimeo.com/video/318777960"
+          frameborder="0"
+          webkitallowfullscreen
+          mozallowfullscreen
+          allowfullscreen
+          className="video-player"
+        />
         <p>
           The department of computer science and engineering of Calcutta
           University puts forth their annual technological fest cum alumni
@@ -39,8 +47,7 @@ const About = () => (
           Acharya Prafulla Chandra Ray Shiksha Prangan was setup in the year
           2013.From the year 2015 B.Tech students from 3 branches namely CSE,
           OOE and IT study here. From the year 2015 Reflexons was shifted{" "}
-          <Link to="/#section-4">here</Link>{" "}
-          from the Rajabazar Campus.
+          <Link to="/#section-4">here</Link> from the Rajabazar Campus.
         </p>
       </div>
     </Layout>

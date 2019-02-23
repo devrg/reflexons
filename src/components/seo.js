@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-import card from "../images/socialCard.jpg";
+import defaultCard from "../images/socialCard.jpg";
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, socialPreview }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -38,7 +38,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: data.site.siteMetadata.siteUrl + card
+                content: data.site.siteMetadata.siteUrl + (socialPreview || defaultCard)
               },
               {
                 property: `og:url`,
@@ -58,7 +58,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: `twitter:image`,
-                content: data.site.siteMetadata.siteUrl + card
+                content: data.site.siteMetadata.siteUrl + (socialPreview || defaultCard)
               },
               {
                 name: `twitter:image:alt`,

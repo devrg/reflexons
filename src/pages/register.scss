@@ -5,6 +5,8 @@ $mediaMinWidth: 500px;
 $mediaTinyWidth: 320px;
 
 .event-not-found {
+  z-index: 10;
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 80vh;

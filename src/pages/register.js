@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "gatsby";
 import firebase from "../components/config/Firebase";
 import "firebase/database";
 
@@ -137,7 +138,7 @@ class Register extends Component {
     ) {
       this.displayError(
         "Your team's size should be between 1 and " + this.maxTeamSize
-      );      
+      );
       return false;
     }
 
@@ -225,7 +226,8 @@ class Register extends Component {
     }
   }
 
-  render() {
+
+    render() {
     const data = this.props.location.state;
     if (
       data === null ||
@@ -238,7 +240,7 @@ class Register extends Component {
         <Layout>
           <SEO title="Event Registration" />
           <div className="event-not-found">
-            First, select an event from the homepage
+            First, select an <Link to="/#section-2">event</Link> from the homepage
             <span>Tip: open the menu and tap on 'Events'</span>
           </div>
         </Layout>
@@ -341,6 +343,7 @@ class Register extends Component {
       );
     }
   }
+
 }
 
 export default Register;
