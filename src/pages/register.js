@@ -31,7 +31,7 @@ class Register extends Component {
 
   componentDidMount() {
     if (this.props.location.state !== null)
-      this.setState({ event: this.props.location.state.slug });
+      this.setState({ event: this.props.location.state.event });
 
     if (this.props.location.state !== null) {
       this.maxTeamSize = this.props.location.state.maxTeam;
