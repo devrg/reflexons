@@ -122,28 +122,30 @@ class Register extends Component {
     }
 
     // team size:
-    if (fields.teamSize === "") {
-      this.displayError("Enter your team's size");
-      return false;
-    } else if (isNaN(fields.teamSize)) {
-      this.displayError(
-        "Enter your team's size in digits (between 1 and " +
-          this.maxTeamSize +
-          ")"
-      );
-      return false;
-    } else if (
-      parseInt(fields.teamSize) < 1 ||
-      parseInt(fields.teamSize) > this.maxTeamSize
-    ) {
-      this.displayError(
-        "Your team's size should be between 1 and " + this.maxTeamSize
-      );
-      return false;
+    if (this.maxTeamSize > 1) {
+      if (fields.teamSize === "") {
+        this.displayError("Enter your team's size");
+        return false;
+      } else if (isNaN(fields.teamSize)) {
+        this.displayError(
+          "Enter your team's size in digits (between 1 and " +
+            this.maxTeamSize +
+            ")"
+        );
+        return false;
+      } else if (
+        parseInt(fields.teamSize) < 1 ||
+        parseInt(fields.teamSize) > this.maxTeamSize
+      ) {
+        this.displayError(
+          "Your team's size should be between 1 and " + this.maxTeamSize
+        );
+        return false;
+      }
     }
 
-    if(this.maxTeamSize !== 1 && fields.teammembers === "") {
-      this.displayError("Enter your team member(s)'(s) names");
+    if (this.maxTeamSize > 1 && fields.teammembers === "") {
+      this.displayError("Enter your team members' names");
       return false;
     }
 
@@ -182,8 +184,8 @@ class Register extends Component {
         phone: "",
         email: "",
         teamSize: "",
-        teammembers: "",
-      })
+        teammembers: ""
+      });
 
       this.displaySuccess(
         "Thank you for registering! We will get back to you soon."
@@ -226,8 +228,7 @@ class Register extends Component {
     }
   }
 
-
-    render() {
+  render() {
     const data = this.props.location.state;
     if (
       data === null ||
@@ -240,7 +241,8 @@ class Register extends Component {
         <Layout>
           <SEO title="Event Registration" />
           <div className="event-not-found">
-            First, select an <Link to="/#section-2">event</Link> from the homepage
+            First, select an <Link to="/#section-2">event</Link> from the
+            homepage
             <span>Tip: open the menu and tap on 'Events'</span>
           </div>
         </Layout>
@@ -311,20 +313,28 @@ class Register extends Component {
                 onChange={this.handleChange}
                 value={this.state.email}
               />
-              <input
-                className="input-field"
-                name="teamsize"
-                placeholder="# of Team Members"
-                onChange={this.handleChange}
-                value={this.state.teamSize}
-              />
-              <input
-                className="input-field"
-                name="teammember"
-                placeholder="Enter Name Of Team Members"
-                onChange={this.handleChange}
-                value={this.state.teammembers}
-              />
+              {this.maxTeamSize > 1 ? (
+                <input
+                  className="input-field"
+                  name="teamsize"
+                  placeholder="# of Team Members"
+                  onChange={this.handleChange}
+                  value={this.state.teamSize}
+                />
+              ) : (
+                ""
+              )}
+              {this.maxTeamSize > 1 ? (
+                <input
+                  className="input-field"
+                  name="teammember"
+                  placeholder="Enter Name Of Team Members"
+                  onChange={this.handleChange}
+                  value={this.state.teammembers}
+                />
+              ) : (
+                ""
+              )}
               <div
                 className="error-msg"
                 style={{ height: 0, display: "none" }}
@@ -343,7 +353,6 @@ class Register extends Component {
       );
     }
   }
-
 }
 
 export default Register;
