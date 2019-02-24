@@ -24,7 +24,6 @@ class Register extends Component {
       event: ""
     };
 
-    this.maxTeamSize = this.props.maxTeam;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -35,6 +34,15 @@ class Register extends Component {
 
     if (this.props.location.state !== null) {
       this.maxTeamSize = this.props.location.state.maxTeam;
+
+      if (this.props.location.state.maxTeam === "Solo, Duo, Squad") {
+        this.maxTeamSize = 4;
+      } else if (this.props.location.state.maxTeam === "1 bot per team") {
+        this.maxTeamSize = 4;
+      } else {
+        this.maxTeamSize = this.props.location.state.maxTeam;
+      }
+
       console.log("team size: " + this.props.location.state.maxTeam);
     }
 
@@ -122,7 +130,7 @@ class Register extends Component {
     }
 
     // team size:
-    if (this.maxTeamSize > 1) {
+    if (this.maxTeamProcess()) {
       if (fields.teamSize === "") {
         this.displayError("Enter your team's size");
         return false;
@@ -144,7 +152,7 @@ class Register extends Component {
       }
     }
 
-    if (this.maxTeamSize > 1 && fields.teammembers === "") {
+    if (this.maxTeamProcess() && fields.teammembers === "") {
       this.displayError("Enter your team members' names");
       return false;
     }
@@ -191,6 +199,14 @@ class Register extends Component {
         "Thank you for registering! We will get back to you soon."
       );
     }
+  }
+
+  maxTeamProcess() {
+    return (
+      this.maxTeamSize > 1 ||
+      this.maxTeamSize === "Solo, Duo, Squad" ||
+      this.maxTeamSize === "1 bot per team"
+    );
   }
 
   handleChange(event) {
@@ -313,7 +329,7 @@ class Register extends Component {
                 onChange={this.handleChange}
                 value={this.state.email}
               />
-              {this.maxTeamSize > 1 ? (
+              {this.maxTeamProcess() ? (
                 <input
                   className="input-field"
                   name="teamsize"
@@ -324,11 +340,11 @@ class Register extends Component {
               ) : (
                 ""
               )}
-              {this.maxTeamSize > 1 ? (
+              {this.maxTeamProcess() ? (
                 <input
                   className="input-field"
                   name="teammember"
-                  placeholder="Enter Name Of Team Members"
+                  placeholder="Enter Names Of Team Members"
                   onChange={this.handleChange}
                   value={this.state.teammembers}
                 />

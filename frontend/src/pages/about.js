@@ -20,6 +20,7 @@ const About = () => (
       <div className="about-text">
         <div className="heading-text">About Reflexons 2019</div>
         <iframe
+          title="Reflexons 2019 Promo video"
           src="https://player.vimeo.com/video/318777960"
           frameborder="0"
           webkitallowfullscreen

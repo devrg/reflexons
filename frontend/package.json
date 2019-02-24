@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Nabhoneel Majumdar <email@nparchments@gmail.com>",
   "dependencies": {
-    "axios": "^0.18.0",
     "bootstrap": "^4.3.0",
     "firebase": "^5.8.4",
     "gatsby": "^2.0.118",
