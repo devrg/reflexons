@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./lightweight-modal.scss";
 import { Link } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-gtag";
 
 class LightweightModal extends Component {
   componentDidMount() {
@@ -71,6 +72,13 @@ class LightweightModal extends Component {
             >
               Register
             </Link>
+            <OutboundLink
+              target="_blank"
+              href={this.props.downloadLink}
+              className="btn btn-lg btn-outline-primary download-button"
+            >
+              Download details
+            </OutboundLink>
           </div>
         </div>
       </div>

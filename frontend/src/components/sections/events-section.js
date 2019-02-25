@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 
+import codecombatPDF from '../../assets/docs/codecombat.pdf';
+import bughuntPDF from '../../assets/docs/bughunt.pdf';
+import debatePDF from '../../assets/docs/debate.pdf';
+import quizPDF from '../../assets/docs/quiz.pdf';
+import csgoPDF from '../../assets/docs/csgo.pdf';
+
 import "./events-section.scss";
 
 import LightModal from "../lightweight-modal";
@@ -121,7 +127,8 @@ class Events extends Component {
             </div>
           </div>
         ),
-        modalRef: this.codeCombatRef
+        downloadLink: codecombatPDF,
+        modalRef: this.codeCombatRef,
       },
       {
         slug: "codebeta",
@@ -231,7 +238,8 @@ class Events extends Component {
             </div>
           </div>
         ),
-        modalRef: this.codeBetaRef
+        modalRef: this.codeBetaRef,
+        // downloadLink: codebetaPDF,
       },
       {
         slug: "bughunt",
@@ -327,14 +335,15 @@ class Events extends Component {
             </div>
           </div>
         ),
-        modalRef: this.bugHuntRef
+        modalRef: this.bugHuntRef,
+        downloadLink: bughuntPDF,
       },
       {
         slug: "quiz",
         modalHeading: "Quiz",
         eventType: "Open for all",
         fees: "50 per team",
-        maxTeam: "2",
+        maxTeam: "3",
         languages: "",
         details: (
           <div className="table-responsive-sm" style={{ padding: 0 }}>
@@ -402,7 +411,8 @@ class Events extends Component {
             </div>
           </div>
         ),
-        modalRef: this.quizRef
+        modalRef: this.quizRef,
+        downloadLink: quizPDF,
       },
       {
         slug: "debate",
@@ -564,7 +574,8 @@ class Events extends Component {
             </div>
           </div>
         ),
-        modalRef: this.debateRef
+        modalRef: this.debateRef,
+        downloadLink: debatePDF,
       },
       {
         slug: "photography",
@@ -644,7 +655,8 @@ class Events extends Component {
             </div>
           </div>
         ),
-        modalRef: this.photographyRef
+        modalRef: this.photographyRef,
+        // downloadLink: photographyPDF,
       },
       {
         slug: "pubg",
@@ -770,7 +782,8 @@ class Events extends Component {
             </div>
           </div>
         ),
-        modalRef: this.pubgRef
+        modalRef: this.pubgRef,
+        // downloadLink: pubgPDF,
       },
       {
         slug: "csgo",
@@ -876,7 +889,8 @@ class Events extends Component {
             </div>
           </div>
         ),
-        modalRef: this.csgoRef
+        modalRef: this.csgoRef,
+        downloadLink: csgoPDF,
       },
       {
         slug: "line",
@@ -980,7 +994,8 @@ class Events extends Component {
             </table>
           </div>
         ),
-        modalRef: this.lineRef
+        modalRef: this.lineRef,
+        // downloadLink: linePDF,
       }
     ];
 
@@ -1085,6 +1100,7 @@ class Events extends Component {
             maxTeam={event.maxTeam}
             languages={event.languages}
             details={event.details}
+            downloadLink={event.downloadLink}
             modalRef={event.modalRef}
             slug={event.slug}
           />

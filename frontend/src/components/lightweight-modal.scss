@@ -244,3 +244,14 @@ td.detail {
   border-color: black !important;
   color: black !important;
 }
+
+.download-button {
+  width: max-content;
+  margin: 0 1em 0 0 !important;
+}
+
+@media (max-device-width: $mediaTinyWidth) {
+  .download-button {
+    margin: 1em auto !important;
+  }
+}

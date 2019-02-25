@@ -12,7 +12,7 @@ const About = () => (
   <div
     className="about-page"
     style={{
-      background: `linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.68)),url(${CU}) center fixed`
+      background: `linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.68))`
     }}
   >
     <SEO title="About" />

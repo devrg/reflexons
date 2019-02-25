@@ -38,7 +38,7 @@ class Register extends Component {
       if (this.props.location.state.maxTeam === "Solo, Duo, Squad") {
         this.maxTeamSize = 4;
       } else if (this.props.location.state.maxTeam === "1 bot per team") {
-        this.maxTeamSize = 4;
+        this.maxTeamSize = 5;
       } else {
         this.maxTeamSize = this.props.location.state.maxTeam;
       }
