@@ -33,16 +33,17 @@ const IndexPage = () => {
 
         <div className="social-media">
           <OutboundLink
-            href="https://www.facebook.com/reflexon2019/"
-            target="_blank"
+            href="https://www.facebook.com/pg/ReflexonsCU-384052642413499/"            
           >
             <i
               className="fab fa-facebook-f"
               style={{ padding: "0.3em 0.5em" }}
             />
           </OutboundLink>
-          <i className="fab fa-instagram" />
-          <OutboundLink href="mailto:reflexons.2019@gmail.com" target="_blank">
+          <OutboundLink href="https://www.instagram.com/reflexons.2019/">
+            <i className="fab fa-instagram" />
+          </OutboundLink>
+          <OutboundLink href="mailto:reflexons.2019@gmail.com">
             <i className="fas fa-at" />
           </OutboundLink>
         </div>

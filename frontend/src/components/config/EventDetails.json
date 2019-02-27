@@ -1,0 +1,347 @@
+[
+  {
+    "slug": "codecombat",
+    "modalHeading": "Code Combat",
+    "eventType": "For college students of any discipline",
+    "fees": "₹120 per team",
+    "maxTeam": "2",
+    "languages": "C, C++, Java, Python",
+    "details": {
+      "disclaimer_S1": [
+        "Date: 14th March, 2019",
+        "Time: 11:30 AM IST",
+        "Each student must carry their college ID with themselves"
+      ],
+      "disclaimer_S2": [
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Arkadeep Baksi",
+          "phone": "8910945615"
+        },
+        {
+          "name": "Shankhanil Ghosh",
+          "phone": "7872524241"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "1",
+          "rule": "The test will have only programming questions"
+        },
+        {
+          "ruleID": "2",
+          "rule": "The contest is divided into two rounds,each consisting of 5 questions,each with 2 hours duration"
+        },
+        {
+          "ruleID": "3",
+          "rule": "Round 1 will act as a qualification portal for teams to participate in Round 2."
+        },
+        {
+          "ruleID": "4",
+          "rule": "The test will have only programming questions"
+        },
+        {
+          "ruleID": "5",
+          "rule": "The team with maximum score and minimum duration wins."
+        },
+        {
+          "ruleID": "6",
+          "rule": "The team with highest score and lowest time wins the event."
+        },
+        {
+          "ruleID": "7",
+          "rule": "Standard marking metric based on time consumed and number of accepted test-cases"
+        },
+        {
+          "ruleID": "8",
+          "rule": "Every team must have at least one active Hackerearth ID"
+        },
+        {
+          "ruleID": "Note #1",
+          "rule": "Before you attempt programming questions, you should choose a language from the given list"
+        },
+        {
+          "ruleID": "Note #2",
+          "rule": "All inputs for the programming problems are from STDIN and output to STDOUT"
+        },
+        {
+          "ruleID": "Note #3",
+          "rule": "To understand more about the judging environment, time limits, etc. you can read information about the​ ​HackerEarth judge​"
+        },
+        {
+          "ruleID": "Note #4",
+          "rule": "Programming questions have a ​Compile & Run​ option which you can use to run your solution against sample test cases before submitting it"
+        },
+        {
+          "ruleID": "Note #5",
+          "rule": "You can submit the solution for a programming problem as many times as you want. For subjective and objective problems, you can change your answer as many times as you want"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "codebeta",
+    "modalHeading": "Code Beta",
+    "eventType": "Only for First Years and School Students",
+    "fees": "₹60 per team",
+    "maxTeam": "2",
+    "languages": "C, C++, Java",
+    "details": {
+      "disclaimer_S1": [
+        "Date: 13th March, 2019",
+        "Time: 11:00 AM IST",
+        "Each student must carry their college ID with themselves",
+        "If found the student is not a first year or school student then they will be disqualified on spot"
+      ],
+      "disclaimer_S2": [
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Sayangdipto Chakroborty",
+          "phone": "9163825442"
+        },
+        {
+          "name": "Sounak Saha",
+          "phone": "8017029669"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "1",
+          "rule": "One single sprint round, 8 questions in 2 hours"
+        },
+        {
+          "ruleID": "2",
+          "rule": "The team with maximum score and minimum duration wins"
+        },
+        {
+          "ruleID": "3",
+          "rule": "The test will have only Programming Questions"
+        },
+        {
+          "ruleID": "4",
+          "rule": "Marking will occur based on correct test case outputs,within required execution time"
+        },
+        {
+          "ruleID": "5",
+          "rule": "Standard marking metric based on time consumed and number of accepted test-cases"
+        },
+        {
+          "ruleID": "6",
+          "rule": "Every team must have at least one active Hackerearth ID"
+        },
+        {
+          "ruleID": "Note #1",
+          "rule": "Test duration: 2 hrs"
+        },
+        {
+          "ruleID": "Note #2",
+          "rule": "Ensure that your email ID is correct"
+        },
+        {
+          "ruleID": "Note #3",
+          "rule": "Click ​Submit​ after you answer each question"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "bughunt",
+    "modalHeading": "Bug Hunt",
+    "eventType": "Open for all",
+    "fees": "₹100 per team",
+    "maxTeam": "2",
+    "languages": "C, C++",
+    "details": {
+      "disclaimer_S1": [
+        "Each student must carry their college ID with themselves",
+        "Participation in this contest will be as a team of maximum two and all the team members MUST be from the same college"
+      ],
+      "disclaimer_S2": [
+        "Do not try any dishonest or unfair means to move up the rank tables",
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Arkadeep Baksi",
+          "phone": "8910945615"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "1",
+          "rule": "The teams will be given 75 minutes to complete the contest"
+        },
+        {
+          "ruleID": "2",
+          "rule": "Each team will be given a choice to select any one of the following Computer languages in which they would like to try their mettle"
+        },
+        {
+          "ruleID": "3",
+          "rule": "There will be 8 problems in each of the aforesaid languages .The problems will consist of Bug-ridden codes in the respective languages. There can be Syntactical, Logical as well as Runtime Errors in the given codes"
+        },
+        {
+          "ruleID": "4",
+          "rule": "The aim of each team should be to provide error - free codes that would align with the problem expectation . Also more credits will be given to the codes with minimum modifications relative to the code given"
+        },
+        {
+          "ruleID": "5",
+          "rule": "The team that identifies, corrects all the errors and provides a code with minimum modifications relative to the code given will be awarded the maximum marks"
+        },
+        {
+          "ruleID": "8",
+          "rule": "The team with maximum cumulative marks on all the problems will emerge as the Winner"
+        },
+        {
+          "ruleID": "9",
+          "rule": "The Problem-Set in all the allowed Languages will be of the same standard to assure Neutrality"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "quiz",
+    "modalHeading": "Quiz",
+    "eventType": "Open for all",
+    "fees": "₹50 (individual) OR, ₹100 (per team)",
+    "maxTeam": "4",
+    "languages": "",
+    "details": {
+      "disclaimer_S1": [
+        "Each student must carry their college ID with themselves",
+        "Participating contestants should try to maintain formal dress code"
+      ],
+      "disclaimer_S2": [
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Sushmita Kumari",
+          "phone": "9304850228"
+        },
+        {
+          "name": "Shankhanil Ghosh",
+          "phone": "7872524241 OR 8240384027"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "1",
+          "rule": "There will be 3 rounds of quiz and each round will eliminate one/more team(s)"
+        },
+        {
+          "ruleID": "2",
+          "rule": "The final round of quiz will be contested between 2 final teams"
+        },
+        {
+          "ruleID": "3",
+          "rule": "The detailed rules and regulations of each round of the game would be described to the contestants before the beginning of each round"
+        },
+        {
+          "ruleID": "Prizes",
+          "rule": "The winning team will be given a prize money of ₹1000/- and the runners-up will be awarded a prize money of ₹500/-"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "debate",
+    "modalHeading": "Debate",
+    "eventType": "Open for all",
+    "fees": "₹50 per team",
+    "maxTeam": "2",
+    "languages": "",
+    "details": {
+      "disclaimer_S1": [
+        "Each student must carry their college ID with themselves",
+        "Participating contestants should try to maintain formal dress code"
+      ],
+      "disclaimer_S2": [
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Sushmita Kumari",
+          "phone": "9304850228"
+        },
+        {
+          "name": "Shankhanil Ghosh",
+          "phone": "7872524241 OR 8240384027"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "1",
+          "rule": "There will be 3 rounds of debate competition"
+        },
+        {
+          "ruleID": "2",
+          "rule": "In the initial round, all the participants will be divided into groups (of less than 8 members) and a Group Discussion will be held"
+        },
+        {
+          "ruleID": "3",
+          "rule": "The top participants from the 1st round of the competition, will be selected for the 2nd round of competition, where the debate will be held in form of an extempore. Top 2 participants would be qualified into the 3rd and final round"
+        },
+        {
+          "ruleID": "4",
+          "rule": "3rd round will consist of a debate in which each participants would have to defend his or her point of view on a given topic, which will be given at the venue. The participant with the best argument would be declared winner"
+        },
+        {
+          "ruleID": "Prizes",
+          "rule": "The winner team would be awarded a prize money ₹1000/-. The runner’s up team would be awarded a prize money ₹500/-"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "photography",
+    "modalHeading": "Photography",
+    "eventType": "Open for all",
+    "fees": "₹100 per team",
+    "maxTeam": "1",
+    "languages": "",
+    "details": {
+      "disclaimer_S1": [
+        "Each student must carry their college ID with themselves"
+      ],
+      "disclaimer_S2": [
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Ashita Gupta",
+          "phone": "9830878897"
+        },
+        {
+          "name": "Hiya Das",
+          "phone": "9475916985"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "1",
+          "rule": "Photographs will be judged on the following parameters:- Composition, Creativity, Quality of the image"
+        },
+        {
+          "ruleID": "2",
+          "rule": "Do not resubmit your photos"
+        },
+        {
+          "ruleID": "3",
+          "rule": "Photos must be your own work, if we suspect that the work is not your own it shall be removed with an immediate effect."
+        },
+        {
+          "ruleID": "4",
+          "rule": "Submit your photos for prelims at our photography link on the day before the event.(coming soon)"
+        },
+        {
+          "ruleID": "5",
+          "rule": "The theme of finals will be announced at the day of the event."
+        }
+      ]
+    }
+  }
+]

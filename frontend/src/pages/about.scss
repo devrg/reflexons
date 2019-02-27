@@ -33,16 +33,16 @@ $mediaTinyWidth: 400px;
         font-size: 140%;
       }
     }
-  }
+  }  
+}
 
-  .video-player {
-    width: 100%;
-    .share-button {
-      display: none !important;
-    }
-    .headers {
-      display: none !important;
-    }
+.video-player {
+  width: 100%;
+  .share-button {
+    display: none !important;
+  }
+  .headers {
+    display: none !important;
   }
 }
 

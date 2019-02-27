@@ -205,10 +205,13 @@ const getHTMLContent = (name, event) => `<!DOCTYPE html>
                         >
                           In the meantime, stay connected to us via
                           <a
-                            href="https://www.facebook.com/reflexon2019/"
+                            href="https://www.facebook.com/pg/ReflexonsCU-384052642413499/"
                             target="_blank"
                             >Facebook</a
-                          >
+                          >,
+                          <a href="https://www.instagram.com/reflexons.2019/" target="_blank">
+                            Instagram
+                          </a>
                           and
                           <a href="https://reflexons.cucse.org" target="_blank"
                             >Reflexons 2019</a

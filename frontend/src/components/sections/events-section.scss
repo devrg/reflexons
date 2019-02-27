@@ -105,7 +105,7 @@ $timelineSpineColor: #3ae1ff;
           text-align: left;
         }
 
-        button {
+        .btn {
           border-color: white !important;
           color: white !important;
           margin: 0 0.5em;
@@ -122,7 +122,7 @@ $timelineSpineColor: #3ae1ff;
             transition: all 0.3s;
           }
         }
-        button:hover {
+        .btn:hover {
           padding-right: 20px;
           border-color: black !important;
           color: black !important;
@@ -202,7 +202,7 @@ $timelineSpineColor: #3ae1ff;
     .event {
       width: 100%;
 
-      button {
+      .btn {
         margin-right: 1em !important;
         margin-left: 2em !important;
       }
@@ -234,7 +234,7 @@ $timelineSpineColor: #3ae1ff;
         text-align: center !important;
       }
 
-      button {
+      .btn {
         margin: 1em 0 !important;
       }
 

@@ -198,6 +198,10 @@ class Register extends Component {
       this.displaySuccess(
         "Thank you for registering! We will get back to you soon."
       );
+
+      setTimeout(() => {
+        window.location = "/";
+      }, 3000);
     }
   }
 
@@ -309,7 +313,7 @@ class Register extends Component {
                 className="input-field"
                 type="text"
                 name="year"
-                placeholder="Enter your year of studies (at your institute)"
+                placeholder="Which year (of studies) are you in? [example: 2nd year of college]"
                 onChange={this.handleChange}
                 value={this.state.year}
               />
