@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { OutboundLink } from "gatsby-plugin-gtag";
 
-import EventDetails from "../config/EventDetails.json";
+import EventDetails from "../../assets/data/EventDetails.json";
 
 import codebetaPDF from "../../assets/docs/codebeta.pdf";
 import bughuntPDF from "../../assets/docs/bughunt.pdf";
@@ -36,8 +36,6 @@ class Events extends Component {
         fees: event.fees,
         maxTeam: event.maxTeam,
         languages: event.languages,
-        // modalRef: event.modalRef,
-        // downloadLink: event.downloadLink,
         details: (
           <div className="table-responsive-sm" style={{ padding: 0 }}>
             {/* Top Disclaimers: */}
@@ -83,6 +81,7 @@ class Events extends Component {
       };
     });
 
+    // add React refs:
     eventDetailsArray[0]["modalRef"] = this.codeCombatRef;
     eventDetailsArray[1]["modalRef"] = this.codeBetaRef;
     eventDetailsArray[2]["modalRef"] = this.bugHuntRef;
@@ -93,6 +92,7 @@ class Events extends Component {
     // eventDetailsArray[7]["modalRef"] = this.csgoRef;
     // eventDetailsArray[8]["modalRef"] = this.lineRef;
 
+    // add download links:
     eventDetailsArray[0]["downloadLink"] = codebetaPDF;
     eventDetailsArray[1]["downloadLink"] = codebetaPDF;
     eventDetailsArray[2]["downloadLink"] = bughuntPDF;
