@@ -130,7 +130,7 @@ class Header extends Component {
             to="payment"
             className="menu-item"
           >
-            Sponsors' Payment
+            Payment
           </AnchorLink>
         </Menu>
       );

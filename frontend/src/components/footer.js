@@ -9,7 +9,7 @@ const Footer = props => {
   return (
     <footer>
       <div className="upi" id="payment">
-        <div className="list-head">Sponsors' Payment</div>
+        <div className="list-head">Payment</div>
         8902498634@upi
         <StaticQuery
           query={graphql`

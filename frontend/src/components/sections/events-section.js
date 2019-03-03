@@ -256,6 +256,17 @@ class Events extends Component {
                   Register
                 </button>
               </h3>
+              <h3>
+                <span>Counter Strike: GO (knockout)</span>
+                <span>[ Coming soon ]</span>
+                {/* <button
+                  className="btn btn-outline-warning"
+                  data-id="csgo"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button> */}
+              </h3>
             </div>
           </li>
           <li className="event" data-date="Friday">
@@ -273,7 +284,29 @@ class Events extends Component {
                 </button> */}
               </h3>
               <h3>
-                <span>Counter Strike: Go</span>
+                <span>Counter Strike: GO (finals)</span>
+                <span>[ Coming soon ]</span>
+                {/* <button
+                  className="btn btn-outline-warning"
+                  data-id="csgo"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button> */}
+              </h3>
+              <h3>
+                <span>Fifa 19</span>
+                <span>[ Coming soon ]</span>
+                {/* <button
+                  className="btn btn-outline-warning"
+                  data-id="csgo"
+                  onClick={this.handleClick}
+                >
+                  Register
+                </button> */}
+              </h3>
+              <h3>
+                <span>Dota 1v1</span>
                 <span>[ Coming soon ]</span>
                 {/* <button
                   className="btn btn-outline-warning"
