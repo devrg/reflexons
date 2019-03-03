@@ -91,7 +91,7 @@ class Register extends Component {
     }
 
     // course:
-    if (fields.course === "") {
+    if (this.state.event !== "Code Beta" && fields.course === "") {
       this.displayError("Enter your course name");
       return false;
     }
@@ -100,12 +100,29 @@ class Register extends Component {
     if (fields.year === "") {
       this.displayError("Enter the year of studies at your institution");
       return false;
-    } else if (isNaN(fields.year)) {
-      this.displayError("Enter a valid year of study (between 1 and 5)");
-      return false;
-    } else if (!/[1-5]/.test(fields.year)) {
-      this.displayError("Years of studying should be between 1 and 5");
-      return false;
+    } else {
+      if (this.state.event === "Code Beta") {
+        if (
+          !(
+            fields.year.toLowerCase() === "first year" ||
+            fields.year.toLowerCase() === "1st year" ||
+            /^([1-9]|1[0-2])$/.test(fields.year)
+          )
+        ) {
+          this.displayError(
+            "Enter 'first year' for 1st year of college, or simply a number to denote that class"
+          );
+          return false;
+        }
+      } else {
+        if (isNaN(fields.year)) {
+          this.displayError("Enter a valid year of study (between 1 and 5)");
+          return false;
+        } else if (!/[1-5]/.test(fields.year)) {
+          this.displayError("Years of studying should be between 1 and 5");
+          return false;
+        }
+      }
     }
 
     // phone number:
@@ -301,19 +318,27 @@ class Register extends Component {
                 onChange={this.handleChange}
                 value={this.state.stream}
               />
-              <input
-                className="input-field"
-                type="text"
-                name="course"
-                placeholder="Enter Your Course"
-                onChange={this.handleChange}
-                value={this.state.course}
-              />
+              {data.slug !== "codebeta" ? (
+                <input
+                  className="input-field"
+                  type="text"
+                  name="course"
+                  placeholder="Enter Your Course"
+                  onChange={this.handleChange}
+                  value={this.state.course}
+                />
+              ) : (
+                ""
+              )}
               <input
                 className="input-field"
                 type="text"
                 name="year"
-                placeholder="Which year (of studies) are you in? [example: 2nd year of college]"
+                placeholder={
+                  data.slug !== "codebeta"
+                    ? "Which year (of studies) are you in? [example: 2nd year of college]"
+                    : "First year/Class (school)"
+                }
                 onChange={this.handleChange}
                 value={this.state.year}
               />

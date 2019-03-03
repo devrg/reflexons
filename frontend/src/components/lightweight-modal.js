@@ -72,13 +72,13 @@ class LightweightModal extends Component {
             >
               Register
             </Link>
-            <OutboundLink
+            {/* <OutboundLink
               target="_blank"
               href={this.props.downloadLink}
               className="btn btn-lg btn-outline-primary download-button"
             >
               Download details
-            </OutboundLink>
+            </OutboundLink> */}
           </div>
         </div>
       </div>

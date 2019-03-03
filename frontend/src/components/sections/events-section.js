@@ -206,7 +206,7 @@ class Events extends Component {
                 </button>
               </h3>
               <h3>
-                <span>Follow the line</span>
+                <span>Robotics</span>
                 <OutboundLink
                   href="https://plenipotentiary-wax.000webhostapp.com/"
                   className="btn btn-outline-warning"

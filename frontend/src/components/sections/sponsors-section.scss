@@ -1,0 +1,32 @@
+#section-3 {
+  min-height: min-content;
+
+  .sponsor {
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    .gatsby-image-wrapper {
+      margin: 1em 0;
+    }
+  }
+
+  $headingColor: #f7f2e9;
+
+  .sponsor-blurbs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: space-evenly;
+  }
+
+  .section-heading.sponsors {
+    color: $headingColor;
+    margin-bottom: 1em;
+    &:after,
+    &:before {
+      background-color: $headingColor;
+    }
+  }
+}

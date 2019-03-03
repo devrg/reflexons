@@ -50,7 +50,12 @@ class Header extends Component {
             Home
           </Link>
           {this.location === "/" ? (
-            <AnchorLink to="section-2" className="menu-item">
+            <AnchorLink
+              smooth={true}
+              duration={500}
+              to="section-2"
+              className="menu-item"
+            >
               Events
             </AnchorLink>
           ) : (
@@ -97,14 +102,21 @@ class Header extends Component {
               Team
             </Link>
           </div>
-          <Link to="/sponsors" className="menu-item">
-            Sponsors
-          </Link>
-          <Link to="/contact" className="menu-item">
+          <AnchorLink
+            to="contact-us"
+            smooth={true}
+            duration={500}
+            className="menu-item"
+          >
             Contact
-          </Link>
+          </AnchorLink>
           {this.location === "/" ? (
-            <AnchorLink to="section-4" className="menu-item">
+            <AnchorLink
+              smooth={true}
+              duration={500}
+              to="section-4"
+              className="menu-item"
+            >
               Location
             </AnchorLink>
           ) : (
@@ -112,6 +124,14 @@ class Header extends Component {
               Location
             </Link>
           )}
+          <AnchorLink
+            smooth={true}
+            duration={500}
+            to="payment"
+            className="menu-item"
+          >
+            Sponsors' Payment
+          </AnchorLink>
         </Menu>
       );
     }
