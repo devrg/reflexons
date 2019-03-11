@@ -44,7 +44,7 @@ const Team = props => {
                   <Img fluid={member.image} />
                 </div>
                 <div className="team-member-name">{member.name}</div>
-                <div className="team-member-role">{member.role}</div>
+                {/* <div className="team-member-role">{member.role}</div> */}
                 <div className="contact-details">
                   <div className="contact-number">
                     <a href={"tel:" + member.phone}>{member.phone}</a>

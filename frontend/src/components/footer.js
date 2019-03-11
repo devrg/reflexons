@@ -10,7 +10,6 @@ const Footer = props => {
     <footer>
       <div className="upi" id="payment">
         <div className="list-head">Payment</div>
-        8902498634@upi
         <StaticQuery
           query={graphql`
             query upi {
@@ -27,6 +26,17 @@ const Footer = props => {
             <Img fluid={data.placeholderImage.childImageSharp.fluid} />
           )}
         />
+        <a
+          className="btn btn-success"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          style={{ marginBottom: "1em" }}
+        >
+          More
+        </a>
       </div>
       <div className="pages-list">
         <div className="list-head">Reflexon Contents</div>

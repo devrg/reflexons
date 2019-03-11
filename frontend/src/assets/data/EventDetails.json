@@ -3,7 +3,7 @@
     "slug": "codecombat",
     "modalHeading": "Code Combat",
     "eventType": "For college students of any discipline",
-    "fees": "₹120 per team",
+    "fees": "₹70 per team",
     "maxTeam": "2",
     "languages": "C, C++, Java, Python",
     "details": {
@@ -211,6 +211,7 @@
     "languages": "",
     "details": {
       "disclaimer_S1": [
+        "Reporting time: 11 AM",
         "Each student must carry their college ID with themselves",
         "Participating contestants should try to maintain formal dress code"
       ],
@@ -248,14 +249,15 @@
     }
   },
   {
-    "slug": "debate",
-    "modalHeading": "Debate",
+    "slug": "mockparliament",
+    "modalHeading": "Mock Parliament",
     "eventType": "Open for all",
     "fees": "₹50 per team",
-    "maxTeam": "2",
+    "maxTeam": "1",
     "languages": "",
     "details": {
       "disclaimer_S1": [
+        "Reporting time: 11 AM",
         "Each student must carry their college ID with themselves",
         "Participating contestants should try to maintain formal dress code"
       ],
@@ -275,11 +277,11 @@
       "rules": [
         {
           "ruleID": "1",
-          "rule": "There will be 3 rounds of debate competition"
+          "rule": "There will be 3 rounds"
         },
         {
           "ruleID": "2",
-          "rule": "In the initial round, all the participants will be divided into groups (of less than 8 members) and a Group Discussion will be held"
+          "rule": "In the initial round, all the participants will be divided into groups (of less than 8 members) and a Round Table Conference will be held"
         },
         {
           "ruleID": "3",
@@ -305,7 +307,8 @@
     "languages": "",
     "details": {
       "disclaimer_S1": [
-        "Each student must carry their college ID with themselves"
+        "Each student must carry their college ID with themselves",
+        "Once you register, you will receive a confirmation email containing a document with the rules and regulations"
       ],
       "disclaimer_S2": [
         "In case of any disputes, the decision of the event coordinator will be final"
@@ -335,11 +338,123 @@
         },
         {
           "ruleID": "4",
-          "rule": "Submit your photos for prelims at our photography link on the day before the event.(coming soon)"
+          "rule": "The theme of finals will be announced at the day of the event."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "pubg",
+    "modalHeading": "PUBG: Mobile",
+    "eventType": "Open for all",
+    "fees": "₹80 per team",
+    "maxTeam": "4",
+    "languages": "",
+    "details": {
+      "disclaimer_S1": [
+        "Each student must carry their college ID with themselves"
+      ],
+      "disclaimer_S2": [
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Kushal Mandal",
+          "phone": "9126560621"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "Rules & Regulations",
+          "rule": "<#NONE>"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "csgo",
+    "modalHeading": "Counter Strike: GO",
+    "eventType": "Open for all",
+    "fees": "₹150 per team",
+    "maxTeam": "5",
+    "languages": "",
+    "details": {
+      "disclaimer_S1": [
+        "Each student must carry their college ID with themselves"
+      ],
+      "disclaimer_S2": [
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Kushal Mandal",
+          "phone": "9126560621"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "NOTE",
+          "rule": "Both 'Counter Strike: GO (knockout)' and 'Counter Strike: GO (finals)' are part of the same event, they will just be held on two different days"
         },
         {
-          "ruleID": "5",
-          "rule": "The theme of finals will be announced at the day of the event."
+          "ruleID": "Rules & Regulations",
+          "rule": "<#NONE>"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "fifa",
+    "modalHeading": "Fifa 19",
+    "eventType": "Open for all",
+    "fees": "₹50 per person",
+    "maxTeam": "1",
+    "languages": "",
+    "details": {
+      "disclaimer_S1": [
+        "Each student must carry their college ID with themselves"
+      ],
+      "disclaimer_S2": [
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Kushal Mandal",
+          "phone": "9126560621"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "Rules & Regulations",
+          "rule": "<#NONE>"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "dota",
+    "modalHeading": "DOTA 2 (1 versus 1)",
+    "eventType": "Open for all",
+    "fees": "₹50 per person",
+    "maxTeam": "1",
+    "languages": "",
+    "details": {
+      "disclaimer_S1": [
+        "Each student must carry their college ID with themselves"
+      ],
+      "disclaimer_S2": [
+        "In case of any disputes, the decision of the event coordinator will be final"
+      ],
+      "contact": [
+        {
+          "name": "Kushal Mandal",
+          "phone": "9126560621"
+        }
+      ],
+      "rules": [
+        {
+          "ruleID": "Rules & Regulations",
+          "rule": "<#NONE>"
         }
       ]
     }

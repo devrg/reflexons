@@ -40,8 +40,12 @@ class LightweightModal extends Component {
               </div>
               <div className="max-team">
                 <div>
-                  <span className="info-header">Maximum heads per team:</span>
-                  {this.props.maxTeam}
+                  <span className="info-header">
+                    {this.props.maxTeam == 1
+                      ? "Individual participation"
+                      : "Maximum heads per team:"}
+                  </span>
+                  {this.props.maxTeam == 1 ? "" : this.props.maxTeam}
                 </div>
               </div>
             </div>

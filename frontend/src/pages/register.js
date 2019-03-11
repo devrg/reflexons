@@ -21,7 +21,8 @@ class Register extends Component {
       email: "",
       teamSize: "",
       teammembers: "",
-      event: ""
+      event: "",
+      teamPreference: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -169,9 +170,40 @@ class Register extends Component {
       }
     }
 
+    let commaCount =
+      (fields.teammembers.match(/,/g) || []).length +
+      1 -
+      ((fields.teammembers.match(/^,/) || []).length +
+        (fields.teammembers.match(/,$/) || []).length);
+
     if (this.maxTeamProcess() && fields.teammembers === "") {
       this.displayError("Enter your team members' names");
       return false;
+    } else if (this.maxTeamProcess() && commaCount != fields.teamSize) {
+      this.displayError(
+        "Enter " +
+          fields.teamSize +
+          " names (separate each name with a COMMA (,)"
+      );
+      return false;
+    }
+
+    commaCount =
+      (fields.teamPreference.match(/,/g) || []).length +
+      1 -
+      ((fields.teamPreference.match(/^,/) || []).length +
+        (fields.teamPreference.match(/,$/) || []).length);
+
+    if (fields.event === "Fifa 19") {
+      if (fields.teamPreference === "") {
+        this.displayError("Enter 3 team preferences (comma separated)");
+        return false;
+      } else if (commaCount != 3) {
+        this.displayError(
+          "Enter exactly 3 team preferences (separated by commas)"
+        );
+        return false;
+      }
     }
 
     // valid:
@@ -183,42 +215,62 @@ class Register extends Component {
     const data = { ...this.state };
 
     if (this.verify(data)) {
-      const newReg = firebase
-        .database()
-        .ref("registrations")
-        .push();
-      newReg.set({
-        name: data.name,
-        institution: data.institution,
-        stream: data.stream,
-        course: data.course,
-        year: data.year,
-        phone: data.phone,
-        email: data.email,
-        event: data.event,
-        teamSize: data.teamSize,
-        teamMembers: data.teammembers
-      });
+      // var presenceRef = firebase.database().ref("disconnectmessage");
+      // presenceRef.onDisconnect().set("I disconnected!");
 
-      this.setState({
-        name: "",
-        institution: "",
-        stream: "",
-        course: "",
-        year: "",
-        phone: "",
-        email: "",
-        teamSize: "",
-        teammembers: ""
-      });
+      // let status = firebase.database().ref(".info/connected");
+      // status.on("value", function(snap) {
+      //   if (snap.val() === true) {
+      //     console.log("connected");
+      //   } else {
+      //     console.log("not connected");
+      //   }
+      // });
 
-      this.displaySuccess(
-        "Thank you for registering! We will get back to you soon."
-      );
+      const dbConn = firebase.database().ref("registrations");
+      const newReg = dbConn.push();
+      if (
+        !(newReg.key === null || newReg.key === "" || newReg.key === undefined)
+      ) {
+        newReg.set({
+          name: data.name,
+          institution: data.institution,
+          stream: data.stream,
+          course: data.course,
+          year: data.year,
+          phone: data.phone,
+          email: data.email,
+          event: data.event,
+          teamSize: data.teamSize,
+          teamMembers: data.teammembers,
+          teamPreference: data.teamPreference
+        });
 
-      setTimeout(() => {
-        window.location = "/";
-      }, 3000);
+        this.setState({
+          name: "",
+          institution: "",
+          stream: "",
+          course: "",
+          year: "",
+          phone: "",
+          email: "",
+          teamSize: "",
+          teammembers: "",
+          teamPreference: ""
+        });
+
+        this.displaySuccess(
+          "Thank you for registering! We will get back to you soon."
+        );
+
+        setTimeout(() => {
+          window.location = "/";
+        }, 3000);
+      } else {
+        this.displayError(
+          "Sorry, your entry could not be save (our servers couldn't be reached)"
+        );
+      }
     }
   }
 
@@ -259,6 +311,9 @@ class Register extends Component {
         break;
       case "teammember":
         this.setState({ teammembers: event.target.value });
+        break;
+      case "teamPreference":
+        this.setState({ teamPreference: event.target.value });
         break;
       default:
         console.log("Error: " + event);
@@ -373,9 +428,20 @@ class Register extends Component {
                 <input
                   className="input-field"
                   name="teammember"
-                  placeholder="Enter Names Of Team Members"
+                  placeholder="Enter Names Of Team Members (comma separated)"
                   onChange={this.handleChange}
                   value={this.state.teammembers}
+                />
+              ) : (
+                ""
+              )}
+              {data.slug === "fifa" ? (
+                <input
+                  className="input-field"
+                  name="teamPreference"
+                  placeholder="Enter 3 team names (separated by commas)"
+                  onChange={this.handleChange}
+                  value={this.state.teamPreference}
                 />
               ) : (
                 ""

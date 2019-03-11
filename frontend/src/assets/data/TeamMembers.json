@@ -9,7 +9,7 @@
   },
   {
     "id": "sourjya",
-    "name": "Souvik Mukherjee",
+    "name": "Sourjya Mukherjee",
     "role": "Treasurer",
     "phone": "9874052864",
     "email": "sourjyar7@gmail.com",
@@ -23,6 +23,14 @@
     "email": "ssuparno1998@gmail.com",
     "image": {}
   },
+  {
+    "id": "nistha",
+    "name": "Nistha Gupta",
+    "role": "Member",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },  
   {
     "id": "suheeta",
     "name": "Suheeta Samanta",
@@ -40,8 +48,64 @@
     "image": {}
   },
   {
-    "id": "nistha",
-    "name": "Nistha Gupta",
+    "id": "kashif",
+    "name": "Kashif Ahmad",
+    "role": "Member",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },
+  {
+    "id": "kushal",
+    "name": "Kushal Mandal",
+    "role": "Member",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },
+  {
+    "id": "soumik",
+    "name": "Soumik De",
+    "role": "Member",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },
+  {
+    "id": "rishov",
+    "name": "Rishov Nag",
+    "role": "Member",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },
+  {
+    "id": "ayan",
+    "name": "Ayan Sett",
+    "role": "Member",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },
+  {
+    "id": "rebel",
+    "name": "Nabhoneel Majumdar",
+    "role": "Member",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },
+  {
+    "id": "suchandra",
+    "name": "Suchandra Jha",
+    "role": "Social Media Handler",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },
+  {
+    "id": "shalini",
+    "name": "Shalini Chakraborty",
     "role": "Member",
     "phone": "",
     "email": "",
@@ -50,6 +114,14 @@
   {
     "id": "subhajit",
     "name": "Subhajit Gupta",
+    "role": "Member",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },
+  {
+    "id": "subham",
+    "name": "Subham Das",
     "role": "Member",
     "phone": "",
     "email": "",
@@ -80,22 +152,6 @@
     "image": {}
   },
   {
-    "id": "tripti",
-    "name": "Tripti Guha",
-    "role": "Member",
-    "phone": "",
-    "email": "",
-    "image": {}
-  },
-  {
-    "id": "shankhanil",
-    "name": "Shankhanil Ghosh",
-    "role": "Member",
-    "phone": "",
-    "email": "",
-    "image": {}
-  },
-  {
     "id": "ashita",
     "name": "Ashita Gupta",
     "role": "Member",
@@ -104,16 +160,16 @@
     "image": {}
   },
   {
-    "id": "shubham",
-    "name": "Shubham Das",
+    "id": "tripti",
+    "name": "Tripti Guha",
     "role": "Member",
     "phone": "",
     "email": "",
     "image": {}
   },
   {
-    "id": "nishant",
-    "name": "Nishant Kumar",
+    "id": "shankhaneel",
+    "name": "Shankhaneel Ghosh",
     "role": "Member",
     "phone": "",
     "email": "",

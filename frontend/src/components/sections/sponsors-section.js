@@ -17,7 +17,7 @@ const Sponsors = props => {
           query {
             allFile(
               filter: {
-                extension: { eq: "png" }
+                extension: { regex: "/(jpg)|(jpeg)|(png)/" }
                 relativeDirectory: { eq: "sponsors" }
               }
             ) {
@@ -41,7 +41,7 @@ const Sponsors = props => {
               {data.allFile.edges.map(({ node }) => {
                 return (
                   <div className="sponsor" key={node.id}>
-                    <Img fluid={node.childImageSharp.fluid} />
+                    <Img fluid={node.childImageSharp.fluid} id={node.id} />
                     {node.name}
                   </div>
                 );

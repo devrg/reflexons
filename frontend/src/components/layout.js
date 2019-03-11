@@ -44,6 +44,36 @@ const Layout = ({ children }) => (
           <main id="page-wrap">
             <TopBar />
             {children}
+            <div className="collapse" id="collapseExample">
+              <div
+                className="card card-body"
+                style={{
+                  backgroundColor: "#ffffffa6",
+                  fontSize: "1.1em",
+                  padding: "1em"
+                }}
+              >
+                <div className="container">
+                  <ul>
+                    <li>8902498634@upi</li>
+                    <li>
+                      Bank account details:
+                      <ol>
+                        <li>
+                          Account name: ANNL GETTOGETHER COM CSCUNI SANJIT SATUA
+                        </li>
+                        <li>
+                          Bank name with Branch name: SBI Manicktala Branch
+                        </li>
+                        <li>Account number: 11152795149</li>
+                        <li>IFSC no: SBIN0001715</li>
+                        <li>MICR 010050</li>
+                      </ol>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <Footer />
           </main>
         </div>

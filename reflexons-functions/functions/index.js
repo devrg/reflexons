@@ -18,7 +18,9 @@ exports.sendEmailConfirmation = functions.database
     const snapshot = change.after;
     const val = snapshot.val();
 
-    const mailOptions = {
+    console.log(val);
+
+    let mailOptions = {
       from: '"The Reflexons Team" <reflexons.2019@gmail.com>',
       to: val.email,
       subject: val.event + " Registration Confirmation",
@@ -26,11 +28,21 @@ exports.sendEmailConfirmation = functions.database
       html: getHTMLContent(val.name, val.event)
     };
 
+    if (val.event === "Photography") {
+      mailOptions.attachments = [
+        {
+          filename: "Photography Rules and Regulations.pdf",
+          path:
+            "https://firebasestorage.googleapis.com/v0/b/reflexons-2019.appspot.com/o/PhotographyEventDetails.pdf?alt=media&token=004a3935-3b0d-47e0-871e-b176e5ce2e66"
+        }
+      ];
+    }
+
     mailTransport.sendMail(mailOptions).then((res, err) => {
       if (err) {
         console.log("Email failed to be sent for " + val.email);
         console.log(val);
-        console.log(error);
+        console.log(err);
       } else {
         console.log("Email sent for " + val.email);
         console.log(val);
@@ -183,6 +195,16 @@ const getHTMLContent = (name, event) => `<!DOCTYPE html>
                       <td
                         style="font-family: sans-serif; font-size: 14px; vertical-align: top;"
                       >
+                        <p
+                          style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;"
+                        >
+                          <b>${
+                            event === "Photography"
+                              ? "NOTE: The attached file contains rules & regulations for this event"
+                              : ""
+                          }
+                          </b>
+                        </p>
                         <p
                           style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;"
                         >

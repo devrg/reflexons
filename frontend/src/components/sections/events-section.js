@@ -3,11 +3,10 @@ import { OutboundLink } from "gatsby-plugin-gtag";
 
 import EventDetails from "../../assets/data/EventDetails.json";
 
-import codebetaPDF from "../../assets/docs/codebeta.pdf";
-import bughuntPDF from "../../assets/docs/bughunt.pdf";
-import debatePDF from "../../assets/docs/debate.pdf";
-import quizPDF from "../../assets/docs/quiz.pdf";
 import csgoPDF from "../../assets/docs/csgo.pdf";
+import fifaPDF from "../../assets/docs/fifa19.pdf";
+import pubgPDF from "../../assets/docs/pubg.pdf";
+import dotaPDF from "../../assets/docs/dota.pdf";
 
 import "./events-section.scss";
 
@@ -27,6 +26,15 @@ class Events extends Component {
     this.pubgRef = React.createRef();
     this.csgoRef = React.createRef();
     this.lineRef = React.createRef();
+    this.fifaRef = React.createRef();
+    this.dotaRef = React.createRef();
+
+    const PDFs = {
+      pubg: pubgPDF,
+      csgo: csgoPDF,
+      fifa: fifaPDF,
+      dota: dotaPDF
+    };
 
     let eventDetailsArray = EventDetails.map(event => {
       return {
@@ -50,7 +58,19 @@ class Events extends Component {
                 {event.details.rules.map((rule, id) => (
                   <tr key={id}>
                     <td className="serial-number">{rule.ruleID}</td>
-                    <td className="detail">{rule.rule}</td>
+                    <td className="detail">
+                      {rule.rule === "<#NONE>" ? (
+                        <OutboundLink
+                          className="btn btn-warning"
+                          style={{ color: "white !important" }}
+                          href={PDFs[event.slug]}
+                        >
+                          Download Rules &amp; Regulations
+                        </OutboundLink>
+                      ) : (
+                        rule.rule
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -88,20 +108,10 @@ class Events extends Component {
     eventDetailsArray[3]["modalRef"] = this.quizRef;
     eventDetailsArray[4]["modalRef"] = this.debateRef;
     eventDetailsArray[5]["modalRef"] = this.photographyRef;
-    // eventDetailsArray[6]["modalRef"] = this.pubgRef;
-    // eventDetailsArray[7]["modalRef"] = this.csgoRef;
-    // eventDetailsArray[8]["modalRef"] = this.lineRef;
-
-    // add download links:
-    eventDetailsArray[0]["downloadLink"] = codebetaPDF;
-    eventDetailsArray[1]["downloadLink"] = codebetaPDF;
-    eventDetailsArray[2]["downloadLink"] = bughuntPDF;
-    eventDetailsArray[3]["downloadLink"] = quizPDF;
-    eventDetailsArray[4]["downloadLink"] = debatePDF;
-    // eventDetailsArray[5]["downloadLink"] = photographyPDF;
-    // eventDetailsArray[6]["downloadLink"] = pubgPDF;
-    // eventDetailsArray[7]["downloadLink"] = csgoPDF;
-    // eventDetailsArray[8]["downloadLink"] = linePDF;
+    eventDetailsArray[6]["modalRef"] = this.pubgRef;
+    eventDetailsArray[7]["modalRef"] = this.csgoRef;
+    eventDetailsArray[8]["modalRef"] = this.fifaRef;
+    eventDetailsArray[9]["modalRef"] = this.dotaRef;
 
     this.eventDetails = eventDetailsArray;
 
@@ -134,8 +144,11 @@ class Events extends Component {
       case "csgo":
         this.csgoRef.current.style.display = "block";
         break;
-      case "line":
-        this.lineRef.current.style.display = "block";
+      case "fifa":
+        this.fifaRef.current.style.display = "block";
+        break;
+      case "dota":
+        this.dotaRef.current.style.display = "block";
         break;
       default:
     }
@@ -172,23 +185,25 @@ class Events extends Component {
             <div className="events">
               <h3>
                 <span>Bug hunt</span>
-                <button
+                <span>[ Registrations closed ]</span>
+                {/* <button
                   className="btn btn-outline-warning"
                   data-id="bug-hunt"
                   onClick={this.handleClick}
                 >
                   Register
-                </button>
+                </button> */}
               </h3>
               <h3>
-                <span>Debate</span>
-                <button
+                <span>Mock Parliament</span>
+                <span>[ Registrations closed ]</span>
+                {/* <button
                   className="btn btn-outline-warning"
                   data-id="debate"
                   onClick={this.handleClick}
                 >
                   Register
-                </button>
+                </button> */}
               </h3>
             </div>
           </li>
@@ -204,17 +219,6 @@ class Events extends Component {
                 >
                   Register
                 </button>
-              </h3>
-              <h3>
-                <span>Robotics</span>
-                <OutboundLink
-                  href="https://plenipotentiary-wax.000webhostapp.com/"
-                  className="btn btn-outline-warning"
-                  data-id="line"
-                  // onClick={this.handleClick}
-                >
-                  Register
-                </OutboundLink>
               </h3>
             </div>
           </li>
@@ -258,14 +262,13 @@ class Events extends Component {
               </h3>
               <h3>
                 <span>Counter Strike: GO (knockout)</span>
-                <span>[ Coming soon ]</span>
-                {/* <button
+                <button
                   className="btn btn-outline-warning"
                   data-id="csgo"
                   onClick={this.handleClick}
                 >
                   Register
-                </button> */}
+                </button>
               </h3>
             </div>
           </li>
@@ -273,48 +276,55 @@ class Events extends Component {
             <p>15 - 03 - 2019</p>
             <div className="events">
               <h3>
-                <span>PUBG</span>
-                <span>[ Coming soon ]</span>
-                {/* <button
+                <span>Robotics</span>
+                <OutboundLink
+                  href="https://plenipotentiary-wax.000webhostapp.com/"
+                  className="btn btn-outline-warning"
+                  data-id="line"
+                  // onClick={this.handleClick}
+                >
+                  Register
+                </OutboundLink>
+              </h3>
+              <h3>
+                <span>PUBG: Mobile</span>
+                <button
                   className="btn btn-outline-warning"
                   data-id="pubg"
                   onClick={this.handleClick}
                 >
                   Register
-                </button> */}
+                </button>
               </h3>
               <h3>
                 <span>Counter Strike: GO (finals)</span>
-                <span>[ Coming soon ]</span>
-                {/* <button
+                <button
                   className="btn btn-outline-warning"
                   data-id="csgo"
                   onClick={this.handleClick}
                 >
                   Register
-                </button> */}
+                </button>
               </h3>
               <h3>
                 <span>Fifa 19</span>
-                <span>[ Coming soon ]</span>
-                {/* <button
+                <button
                   className="btn btn-outline-warning"
-                  data-id="csgo"
+                  data-id="fifa"
                   onClick={this.handleClick}
                 >
                   Register
-                </button> */}
+                </button>
               </h3>
               <h3>
                 <span>Dota 1v1</span>
-                <span>[ Coming soon ]</span>
-                {/* <button
+                <button
                   className="btn btn-outline-warning"
-                  data-id="csgo"
+                  data-id="dota"
                   onClick={this.handleClick}
                 >
                   Register
-                </button> */}
+                </button>
               </h3>
             </div>
           </li>
