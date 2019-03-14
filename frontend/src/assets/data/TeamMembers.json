@@ -30,7 +30,7 @@
     "phone": "",
     "email": "",
     "image": {}
-  },  
+  },
   {
     "id": "suheeta",
     "name": "Suheeta Samanta",
@@ -130,6 +130,14 @@
   {
     "id": "arkadeep",
     "name": "Arkadeep Baksi",
+    "role": "Member",
+    "phone": "",
+    "email": "",
+    "image": {}
+  },
+  {
+    "id": "soumitri",
+    "name": "Soumitri Mukherjee",
     "role": "Member",
     "phone": "",
     "email": "",
